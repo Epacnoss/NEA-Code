@@ -124,6 +124,9 @@ public class bulletActual extends Entity { //bullet class
                 if(dist <= avImg / 2)
                     enemyToHit.aura();
 
+                if(enemyToHit.isDone())
+                    dead = true;
+
             }
         });
         mouseCheckerThread.start();
