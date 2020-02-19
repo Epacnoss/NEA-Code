@@ -1,0 +1,67 @@
+BEGIN lvl1 ()
+    moneyStr <- level.get("playerGets", "money").toString()
+    heartsStr <- level.get("playerGets", "hp").toString()
+
+    money <- 1
+    hearts <- 1
+
+    BEGIN IF INT_REGEX.matcher(moneyStr).matches() && INT_REGEX.matcher(heartsStr).matches()
+        money <- Integer.parseInt(moneyStr)
+        hearts <- Integer.parseInt(heartsStr)
+    END IF
+
+    window <- NEW JFrame("Apex Turrets")
+    window.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE)
+    window.setLayout(NEW GridLayout(1, 2))
+
+    pm <- NEW PlayerManager(money, hearts)
+    sqc <- NEW squareCollection(NEW squareParser(NEW CfgReader(main.MAPS_LOC + "stg1.cfg")))
+    waves <- NEW waveManager("lvl1.cfg", sqc, pm, window)
+    c <- NEW canvas(CURRENT_LEVEL, pm, waves)
+
+    window.add(c)
+
+    tm <- NEW TurretManager(sqc, pm, window)
+    window.pack();
+    window.setVisible(TRUE)
+    window.setPreferredSize(Toolkit.getDefaultToolkit().getScreenSize())
+
+    runThread <- NEW Thread (() -> {
+        current = System.currentTimeMillis()
+        delay = 10
+
+        windowHasStarted = TRUE
+
+        BEGIN WHILE window.isVisible()
+            c.paint(c.getGraphics())
+
+            BEGIN WHILE !c.hasFinishedRendering()
+                CONTINUE
+            END WHILE
+
+            BEGIN IF System.currentTimeMillis() - current > delay
+                enemyActuals <- waves.getEntites().clone()
+                turretActuals <- tm.setEnemiesAndGetTurretsAndBullets(enemyActuals).clone()
+
+                finalEntites <- NEW ArrayList<Entity>()
+                finalEntites.addAll(enemyActuals)
+                finalEntites.addAll(turretActuals)
+
+                c.setEntities(finalEnties)
+
+                current <- System.currentTimeMillis()
+            END IF
+        END WHILE
+
+        playAgain <- JOptionPane.showConfirmDialog(null, "Would you like to play again?")
+
+        BEGIN IF playAgain == JOptionPane.YES_OPTION
+            lvl1()
+        END IF
+        BEGIN ELSE
+            System.exit(0)
+        END ELSE
+    })
+
+    runThread.start()
+END lvl1

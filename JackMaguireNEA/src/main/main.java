@@ -113,16 +113,13 @@ public class main {
         String moneyStr = level.get("playerGets", "money").toString(); //money and hearts from level config file
         String heartsStr = level.get("playerGets", "hp").toString();
 
-        int money;
-        int hearts; //temporary variables
+        int money = 1;
+        int hearts = 1; //temporary variables - if they didn't match - we have these as a backup
 
         if(INT_REGEX.matcher(moneyStr).matches() && INT_REGEX.matcher(heartsStr).matches()) //if the regex doesn't match - just defaults else use string values
         {
             money = Integer.parseInt(moneyStr); //parse
             hearts = Integer.parseInt(heartsStr);
-        } else {
-            money = 1;
-            hearts = 1; //default values
         }
 
         //region main window
