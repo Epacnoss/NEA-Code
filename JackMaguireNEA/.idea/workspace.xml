@@ -7,14 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adafda04-aca3-4402-bcfb-4f1651a3f54a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Don't look at this unless death is wished.uml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entity.uml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NEA/classes/render/mustBeRendered/Entity/turret/bullet/bulletActual$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NEA/classes/render/mustBeRendered/Entity/turret/bullet/bulletActual$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NEA/classes/render/mustBeRendered/Entity/turret/bullet/bulletActual.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NEA/classes/render/mustBeRendered/Entity/turret/bullet/bulletActual.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gameplay/waves/waveManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gameplay/waves/waveManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/enemy/enemyActual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/enemy/enemyActual.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/turret/bullet/bulletActual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/turret/bullet/bulletActual.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/turret/turretActual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/turret/turretActual.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Pseudocode/Turret.pseudocode" beforeDir="false" afterPath="$PROJECT_DIR$/../Pseudocode/Turret.pseudocode" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +162,7 @@
       <workItem from="1581864598232" duration="2813000" />
       <workItem from="1581931192277" duration="16626000" />
       <workItem from="1582016413613" duration="20790000" />
-      <workItem from="1582105270229" duration="5388000" />
+      <workItem from="1582105270229" duration="6378000" />
     </task>
     <task id="LOCAL-00001" summary="change vcs.xml and workspace.xml, to allow for commits inside IntelliJ">
       <created>1582106040143</created>
@@ -349,40 +347,40 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="429" y="0" key="Diagram.Print.Preview.Dialog/0.0.1366.768@0.0.1366.768" timestamp="1581946094225" />
-    <state width="1324" height="202" key="GridCell.Tab.0.bottom" timestamp="1582109442386">
+    <state width="1324" height="202" key="GridCell.Tab.0.bottom" timestamp="1582114158376">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1324" height="202" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1582109442386" />
+    <state width="1324" height="202" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1582114158376" />
     <state width="1878" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1581404441278" />
     <state width="1324" height="202" key="GridCell.Tab.0.bottom/0.23.1366.745@0.23.1366.745" timestamp="1581940438080" />
     <state width="1878" height="375" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1580760615874" />
     <state width="1878" height="235" key="GridCell.Tab.0.bottom/0.23.1920.994@0.23.1920.994" timestamp="1580661750294" />
     <state width="1878" height="235" key="GridCell.Tab.0.bottom/0.23.1920.996@0.23.1920.996" timestamp="1580659142609" />
     <state width="1878" height="184" key="GridCell.Tab.0.bottom/0.23.1920.997@0.23.1920.997" timestamp="1580643390999" />
-    <state width="1324" height="202" key="GridCell.Tab.0.center" timestamp="1582109442384">
+    <state width="1324" height="202" key="GridCell.Tab.0.center" timestamp="1582114158372">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1324" height="202" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1582109442384" />
+    <state width="1324" height="202" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1582114158372" />
     <state width="1878" height="375" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1581404441277" />
     <state width="1324" height="202" key="GridCell.Tab.0.center/0.23.1366.745@0.23.1366.745" timestamp="1581940438067" />
     <state width="1878" height="375" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1580760615872" />
     <state width="1878" height="235" key="GridCell.Tab.0.center/0.23.1920.994@0.23.1920.994" timestamp="1580661750292" />
     <state width="1878" height="235" key="GridCell.Tab.0.center/0.23.1920.996@0.23.1920.996" timestamp="1580659142606" />
     <state width="1878" height="184" key="GridCell.Tab.0.center/0.23.1920.997@0.23.1920.997" timestamp="1580643390998" />
-    <state width="1324" height="202" key="GridCell.Tab.0.left" timestamp="1582109442382">
+    <state width="1324" height="202" key="GridCell.Tab.0.left" timestamp="1582114158371">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1324" height="202" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1582109442382" />
+    <state width="1324" height="202" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1582114158371" />
     <state width="1878" height="375" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1581404441276" />
     <state width="1324" height="202" key="GridCell.Tab.0.left/0.23.1366.745@0.23.1366.745" timestamp="1581940438058" />
     <state width="1878" height="375" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1580760615871" />
     <state width="1878" height="235" key="GridCell.Tab.0.left/0.23.1920.994@0.23.1920.994" timestamp="1580661750292" />
     <state width="1878" height="235" key="GridCell.Tab.0.left/0.23.1920.996@0.23.1920.996" timestamp="1580659142601" />
     <state width="1878" height="184" key="GridCell.Tab.0.left/0.23.1920.997@0.23.1920.997" timestamp="1580643390996" />
-    <state width="1324" height="202" key="GridCell.Tab.0.right" timestamp="1582109442385">
+    <state width="1324" height="202" key="GridCell.Tab.0.right" timestamp="1582114158374">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1324" height="202" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1582109442385" />
+    <state width="1324" height="202" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1582114158374" />
     <state width="1878" height="375" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1581404441278" />
     <state width="1324" height="202" key="GridCell.Tab.0.right/0.23.1366.745@0.23.1366.745" timestamp="1581940438069" />
     <state width="1878" height="375" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1580760615873" />
@@ -513,10 +511,10 @@
     <state x="625" y="255" width="670" height="675" key="run.anything.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1581355676904" />
     <state x="625" y="255" key="run.anything.popup/0.23.1920.992@0.23.1920.992" timestamp="1580661868222" />
     <state x="625" y="255" key="run.anything.popup/0.23.1920.996@0.23.1920.996" timestamp="1580649265871" />
-    <state x="348" y="92" width="670" height="158" key="search.everywhere.popup" timestamp="1582113102567">
+    <state x="348" y="92" width="670" height="158" key="search.everywhere.popup" timestamp="1582114134932">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="348" y="92" width="670" height="158" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1582113102567" />
+    <state x="348" y="92" width="670" height="158" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1582114134932" />
     <state x="489" y="129" width="942" height="223" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1580750127326" />
     <state x="413" y="303" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1581950038034">
       <screen x="0" y="0" width="1366" height="768" />
@@ -528,112 +526,82 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/enemy/enemyActual.java</url>
-          <line>92</line>
-          <option name="timeStamp" value="926" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/enemy/enemyActual.java</url>
-          <line>93</line>
-          <option name="timeStamp" value="927" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/enemy/enemyActual.java</url>
-          <line>94</line>
-          <option name="timeStamp" value="928" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/enemy/enemyActual.java</url>
-          <line>86</line>
-          <option name="timeStamp" value="929" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/enemy/enemyActual.java</url>
-          <line>87</line>
-          <option name="timeStamp" value="930" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/enemy/enemyActual.java</url>
-          <line>88</line>
-          <option name="timeStamp" value="931" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/enemy/enemyActual.java</url>
-          <line>110</line>
+          <line>113</line>
           <option name="timeStamp" value="932" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/enemy/enemyActual.java</url>
-          <line>111</line>
+          <line>114</line>
           <option name="timeStamp" value="933" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/enemy/enemyActual.java</url>
-          <line>112</line>
+          <line>115</line>
           <option name="timeStamp" value="934" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/enemy/enemyActual.java</url>
-          <line>117</line>
+          <line>119</line>
           <option name="timeStamp" value="936" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/enemy/enemyActual.java</url>
-          <line>116</line>
+          <line>118</line>
           <option name="timeStamp" value="937" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/enemy/enemyActual.java</url>
-          <line>120</line>
+          <line>122</line>
           <option name="timeStamp" value="938" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/enemy/enemyActual.java</url>
-          <line>119</line>
+          <line>121</line>
           <option name="timeStamp" value="939" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/enemy/enemyActual.java</url>
-          <line>121</line>
+          <line>123</line>
           <option name="timeStamp" value="940" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/enemy/enemyActual.java</url>
-          <line>122</line>
+          <line>124</line>
           <option name="timeStamp" value="941" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/enemy/enemyActual.java</url>
-          <line>123</line>
+          <line>125</line>
           <option name="timeStamp" value="942" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/enemy/enemyActual.java</url>
-          <line>127</line>
+          <line>129</line>
           <option name="timeStamp" value="943" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/enemy/enemyActual.java</url>
-          <line>126</line>
+          <line>128</line>
           <option name="timeStamp" value="944" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/enemy/enemyActual.java</url>
-          <line>128</line>
+          <line>130</line>
           <option name="timeStamp" value="945" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/enemy/enemyActual.java</url>
-          <line>129</line>
+          <line>131</line>
           <option name="timeStamp" value="946" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/enemy/enemyActual.java</url>
-          <line>130</line>
+          <line>132</line>
           <option name="timeStamp" value="947" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/enemy/enemyActual.java</url>
-          <line>131</line>
+          <line>133</line>
           <option name="timeStamp" value="948" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

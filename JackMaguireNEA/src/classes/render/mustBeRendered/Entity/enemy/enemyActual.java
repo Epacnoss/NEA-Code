@@ -80,62 +80,58 @@ public class enemyActual extends Entity { //enemy class
             main.SOUNDS.get("Spawn.wav").start(); //play the spawn sound
 
 
-            while(!isDone() && !pm.isDone()){ //while we aren't done and neither is the player
-                try {
-                    if(currentStep == squares.getEnemyPath().size()) //if we have reached the final step
-                    {
-                        hasHit = true; //we have hit
-                        System.out.println("Ah-Ha! It appeareth that Tybalteth hath won this round, and Romeo hath beeneth 'pwned'");
-                        return;
-                    }
-                    if(currentHP <= 0) //if we are dead
-                    {
-                        isDead = true; //we are dead
-                        System.out.println("Ah-Ha! Tybalt hath been 'pwned', but noteth by fairest Romeo, but by Ninja, the newesth recruitth of Mixerth.");
-                        return;
-                    }
-
-                    //region move gap
-                    long diff = System.currentTimeMillis() - current; //difference between now and previous runthrough - to account for the time taken to move in the move gap
-                    current = System.currentTimeMillis();
-
-                    if(diff < 0)
-                        diff = 0;
-                    if(diff > MOVE_GAP)
-                        diff = MOVE_GAP;
-
-
-                    TimeUnit.MILLISECONDS.sleep(MOVE_GAP - diff); //wait for the movegap
-                    //endregion
-
-                    currentCoord = squares.getEnemyPath().get(currentStep); //get the currentCoordinate
-                    Coordinate onScrnTarget = Entity.turnFromArrToScrnPlusHalfTile(currentCoord); //get the onscreen (in pixels) target
-                    onScrnTarget = Entity.addHitBoxTolerances(onScrnTarget, CENTRE_OF_HITBOX); //add tolerance for hitbox
-
-
-
-                    dir direction = getXYOnScrn().directionTo(onScrnTarget); //get direction
-                    double dist = getXYOnScrn().distTo(onScrnTarget); //get distance
-
-                    if(distInPx >= dist) { //If the dist we can go is greater than the dist to go, then we know we can get there
-                        setXYInArr(currentCoord); //set the XYInArr coordinate to be right - so we can move to the next step
-                        currentStep++; //increment step
-                        setXYInTile(IN_TILE_TARGET); //move to correct place
-                        continue;
-                    }
-
-                    switch (direction) {
-                        case N -> changeY(-distInPx);
-                        case S -> changeY(distInPx);
-                        case E -> changeX(distInPx);
-                        case W -> changeX(-distInPx);
-                    } //move
-
-
-                } catch (Exception e) {
-                    System.out.println("Enemy mover stooped.");
+            while(!isDone() && !pm.isDone()) { //while we aren't done and neither is the player
+                if (currentStep == squares.getEnemyPath().size()) //if we have reached the final step
+                {
+                    hasHit = true; //we have hit
+                    System.out.println("Ah-Ha! It appeareth that Tybalteth hath won this round, and Romeo hath beeneth 'pwned'");
+                    return;
+                }
+                if (currentHP <= 0) //if we are dead
+                {
+                    isDead = true; //we are dead
+                    System.out.println("Ah-Ha! Tybalt hath been 'pwned', but noteth by fairest Romeo, but by Ninja, the newesth recruitth of Mixerth.");
+                    return;
                 }
 
+                //region move gap
+                long diff = System.currentTimeMillis() - current; //difference between now and previous runthrough - to account for the time taken to move in the move gap
+                current = System.currentTimeMillis();
+
+                if (diff < 0)
+                    diff = 0;
+                if (diff > MOVE_GAP)
+                    diff = MOVE_GAP;
+
+
+                try {
+                    TimeUnit.MILLISECONDS.sleep(MOVE_GAP - diff); //wait for the movegap
+                } catch (InterruptedException e) {
+                    System.out.println("Enemy move gap interrupted");
+                }
+                //endregion
+
+                currentCoord = squares.getEnemyPath().get(currentStep); //get the currentCoordinate
+                Coordinate onScrnTarget = Entity.turnFromArrToScrnPlusHalfTile(currentCoord); //get the onscreen (in pixels) target
+                onScrnTarget = Entity.addHitBoxTolerances(onScrnTarget, CENTRE_OF_HITBOX); //add tolerance for hitbox
+
+
+                dir direction = getXYOnScrn().directionTo(onScrnTarget); //get direction
+                double dist = getXYOnScrn().distTo(onScrnTarget); //get distance
+
+                if (distInPx >= dist) { //If the dist we can go is greater than the dist to go, then we know we can get there
+                    setXYInArr(currentCoord); //set the XYInArr coordinate to be right - so we can move to the next step
+                    currentStep++; //increment step
+                    setXYInTile(IN_TILE_TARGET); //move to correct place
+                    continue;
+                }
+
+                switch (direction) {
+                    case N -> changeY(-distInPx);
+                    case S -> changeY(distInPx);
+                    case E -> changeX(distInPx);
+                    case W -> changeX(-distInPx);
+                } //move
 
 
             }
