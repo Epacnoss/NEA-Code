@@ -44,6 +44,7 @@ public class bulletActual extends Entity { //bullet class
 
             while(!isDone()) { //while we aren't done yet
 
+                //region checks
                 if(!enemyToHit.haveIBeenSpawnedYet()) //if the enemy hasn't been spawned yet - edge case but better than phantom bullets and enemies 'not spawning'
                 {
                     dead = true; //we are dead
@@ -74,6 +75,7 @@ public class bulletActual extends Entity { //bullet class
                     System.out.println("Oof size: Large");
                     return; //close loop
                 }
+                //endregion
 
                 try {
                     TimeUnit.MILLISECONDS.sleep(MOVE_GAP); //try to wait for the move gap
@@ -106,7 +108,6 @@ public class bulletActual extends Entity { //bullet class
                 } //move
 
             }
-
         };
 
         runThread = new Thread(r);

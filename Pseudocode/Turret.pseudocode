@@ -33,3 +33,76 @@ turretActual.runThread <- NEW Thread(() -> {
             END IF
         END FOR            
 })
+
+bulletActual.runThread <- NEW Thread(() -> {
+    av <- main.BOUND * 2
+    distInPx <- (spd * av) / SPEED_DIVISOR
+
+    BEGIN IF distInPx < 0
+        distInPx <- spd
+    END IF
+
+    BEGIN WHILE !isDone()
+        BEGIN IF !enemyToHit.hasBeenSpawnedYet()
+            dead <- TRUE
+            PRINT "?????"
+            BREAK
+        END IF
+
+        BEGIN IF getXYInArr().equals(enemyToHit.getXYInArr()) OR hit
+            BEGIN IF getXYInTile().distTo(enemyToHit.getXYInTile()) < main.BOUND OR hit
+                enemyToHit.damage(dmg)
+                hit <- TRUE
+                PRINT "Enemy killed - Sincerely bullet"
+                RETURN
+            END IF
+        END IF
+
+        BEGIN IF enemyToHit.isDone()
+            dead <- TRUE
+            PRINT "Enemy already done"
+            RETURN
+        END IF
+
+        BEGIN IF getXYInArr.distTo(enemyToHit.getXYInArr()) > range + 1
+            dead <- TRUE
+            PRINT "he got away"
+            RETURN
+        END IF
+
+        BEGIN TRY
+            TimeUnit.MILLISECONDS.sleep(moveGap)
+        END TRY
+        BEGIN CATCH e
+            e.printStackTrace()
+        END CATCH
+
+        onScrnTarget <- Entity.turnFromArrToScrnPlusHalfTile(enemyToHit.getXYInArr(), Coordinate.ZERO)
+        onScrnTarget <- Entity.addHitBoxTolerances(onScrnTarget, CENTRE_OF_HITBOX)
+
+        direction <- getXYOnScrn().directionTo(onScrnTarget)
+        dist <- getXYOnScrn().distTo(onScrnTarget)
+
+        BEGIN IF distInPx >= dist
+            setXYInArr(enemyToHit.getXYInArr())
+            setXYInTile(enemyToHit.getCentreOfHitbox())
+            hit <- TRUE
+            CONTINUE
+        END IF
+
+        BEGIN SWITCH direction
+            BEGIN CASE N
+                changeY(-distInPx)
+            END CASE
+            BEGIN CASE S
+                changeY(distInPx)
+            END CASE
+            BEGIN CASE E
+                changeX(distInPx)
+            END CASE
+            BEGIN CASE W
+                changeX(-distInPx)
+            END CASE
+        END SWITCH
+    END WHILE           
+})
