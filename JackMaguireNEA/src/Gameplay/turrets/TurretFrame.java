@@ -78,7 +78,10 @@ public class TurretFrame extends JPanel { //turret info and player info JPanel
 
                 if(freeSquares.size() == 0) //if there are no remaining free squares - display an error message, and return out
                 {
-                    JOptionPane.showMessageDialog(panel, "Unfortunately, there are no turret spaces left. Good luck!", "No free space.", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(panel,
+                            "Unfortunately, there are no turret spaces left. Good luck!",
+                            "No free space.",
+                            JOptionPane.ERROR_MESSAGE);
                     return;
                 }
 
@@ -91,7 +94,12 @@ public class TurretFrame extends JPanel { //turret info and player info JPanel
                 }
 
                 //else, ask for confirmation and give info on turret using turretTemplate toString
-                int result = JOptionPane.showConfirmDialog(panel, tt.toString(), "Confirm buy Turret: " + tt.getName(), JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, ResourceManager.getIcon(iconUrl));
+                int result = JOptionPane.showConfirmDialog(panel,
+                        tt.toString(),
+                        "Confirm buy Turret: " + tt.getName(),
+                        JOptionPane.OK_CANCEL_OPTION,
+                        JOptionPane.QUESTION_MESSAGE,
+                        ResourceManager.getIcon(iconUrl));
 
                 if(JOptionPane.YES_OPTION == result) { //if it is a yes
 
@@ -100,19 +108,19 @@ public class TurretFrame extends JPanel { //turret info and player info JPanel
                     main.quickCoord(freeSquares);
 
                     //get location
-                    Object location = JOptionPane.showInputDialog(panel, "Please enter a location", "Where would you like your tower?", JOptionPane.QUESTION_MESSAGE, ResourceManager.getIcon(iconUrl), ((Object[]) freeSquares.toArray()), 0);
+                    Object location = JOptionPane.showInputDialog(panel, "Please enter a location",
+                            "Where would you like your tower?",
+                            JOptionPane.QUESTION_MESSAGE,
+                            ResourceManager.getIcon(iconUrl),
+                            freeSquares.toArray(), 0);
 
                     if(location == null) //if null - return out (ie. they cancelled)
                         return;
 
-                    String resInStr = location.toString(); //toString to apply string operations
-
-                    if(resInStr == null) //if null - return out
-                        return;
-
+                    String resultInStr = location.toString(); //toString to apply string operations
 
                     String type = btn.getText().substring(4); //get the type from the button
-                    Coordinate loc = Coordinate.parseFromTS(resInStr); //get the location
+                    Coordinate loc = Coordinate.parseFromTS(resultInStr); //get the location
 
                     if(loc == Coordinate.NULL_COORD) //if it was invalid - return out
                         return;
@@ -129,12 +137,18 @@ public class TurretFrame extends JPanel { //turret info and player info JPanel
         JButton sellBtn = new JButton("Sell tower?"); // sell button
         sellBtn.addActionListener(e -> {
             if (turretActuals.size() == 0) { // double check for turrets to sell
-                JOptionPane.showMessageDialog(panel, "NO TURRETS LEFT.", "Unfortunately, if there are no turrets to sell, you cannot sell a turret.", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(panel,
+                        "NO TURRETS LEFT.",
+                        "Unfortunately, if there are no turrets to sell, you cannot sell a turret.",
+                        JOptionPane.ERROR_MESSAGE);
                 return;
             }
 
 
-            int result = JOptionPane.showConfirmDialog(panel, "Sell turret?", "Do you want to sell a turret - Beware, you will not get back the full investment.", JOptionPane.OK_CANCEL_OPTION);
+            int result = JOptionPane.showConfirmDialog(panel,
+                    "Sell turret?",
+                    "Do you want to sell a turret - Beware, you will not get back the full investment.",
+                    JOptionPane.OK_CANCEL_OPTION);
             //double check they want to sell
 
             if(result == JOptionPane.OK_OPTION) { //if they do

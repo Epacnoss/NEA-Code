@@ -1,0 +1,72 @@
+btn.addActionListener(e -> {
+    BEGIN IF freeSquares.size() == 0
+        JOptionPane.showMessageDialog(panel, "Unfortunately, there are no turret spaces left. Good luck!", "No free space.", JOptionPane.ERROR_MESSAGE)
+        RETURN
+    END IF
+
+    iconUrl <- none
+    BEGIN TRY
+        iconUrl <- NEW URL(tt.getFn())
+    END TRY
+    BEGIN CATCH e
+        PRINT "Ex"
+    END CATCH
+
+    result <- JOptionPane.showConfirmDialog(panel, tt.toString(),
+        "Confirm buy Turret: " + tt.getName(),
+        JOptionPane.OK_CANCEL_OPTION,
+        JOptionPane.QUESTION_MESSAGE,
+        ResourceManager.getIcon(iconUrl))
+
+    BEGIN IF result == JOptionPane.YES_OPTION
+        main.quickEntity(turretActuals)
+        main.quickCoord(usedSquares)
+        main.quickCoord(freeSquares)
+
+        location <- JOptionPane.showInputDialog(panel, "Please enter a location",
+            "Where would you like your tower?",
+            JOptionPane.QUESTION_MESSAGE,
+            ResourceManager.getIcon(iconUrl),
+            freeSquares.toArray(), 0)
+        
+        BEGIN IF location == none
+            RETURN
+        END IF
+
+        resultInStr <- location.toString()
+        type <- btn.getText().subString(4)
+        loc <-  Coordinate.parseFromTS(resultInStr)
+
+        BEGIN IF loc == Coordinate.NULL_COORD
+            RETURN
+        END IF
+
+        tm.buyTurret(loc, type)
+
+        main.quickEntity(turretActuals)
+        main.quickCoord(usedSquares)
+        main.quickCoord(freeSquares)
+    END IF        
+})
+
+BEGIN buyTurret (where, type)
+    BEGIN IF !turretSquaresFree.contains(where)
+        RETURN
+    END IF
+
+    temp <- NEW turretActual(where, dictionary.getTurret(type), pm)
+
+    BEGIN IF !pm.buy(temp.getTurret().getCost())
+        temp.noLongerWorking()
+        JOptionPane.showMessageDialog(tf,
+            "You do not have enough remaining money to do that",
+            "No money.",
+            JOptionPane.ERROR_MESSAGE)
+        RETURN
+    END IF
+
+    turretSquaresUsed.add(temp)
+    turretSquaresFree.add(temp)
+
+    turrets.add(temp)
+END buyTurret

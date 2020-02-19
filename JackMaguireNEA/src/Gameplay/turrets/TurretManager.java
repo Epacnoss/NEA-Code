@@ -107,7 +107,11 @@ public class TurretManager {
 
         if(!pm.buy(temp.getTurret().getCost())) //if we can't buy it - return, if we can - buy it and continue
         {
-            JOptionPane.showMessageDialog(tf, "You do not have enough remaining money to do that", "No money.", JOptionPane.ERROR_MESSAGE);
+            temp.noLongerWorking();
+            JOptionPane.showMessageDialog(tf,
+                    "You do not have enough remaining money to do that",
+                    "No money.",
+                    JOptionPane.ERROR_MESSAGE);
             return;
         }
 
