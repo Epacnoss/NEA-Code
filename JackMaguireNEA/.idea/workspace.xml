@@ -8,6 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="adafda04-aca3-4402-bcfb-4f1651a3f54a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/turret/turretActual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/turret/turretActual.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +181,7 @@
       <workItem from="1581864598232" duration="2813000" />
       <workItem from="1581931192277" duration="16626000" />
       <workItem from="1582016413613" duration="20790000" />
-      <workItem from="1582105270229" duration="1620000" />
+      <workItem from="1582105270229" duration="1949000" />
     </task>
     <task id="LOCAL-00001" summary="change vcs.xml and workspace.xml, to allow for commits inside IntelliJ">
       <created>1582106040143</created>
