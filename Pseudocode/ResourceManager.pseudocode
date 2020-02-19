@@ -1,0 +1,22 @@
+BEGIN getImg (url)
+    BEGIN IF ALL_IMAGES.containsKey(url)
+        RETURN clone(ALL_IMAGES.get(url))
+    END IF
+
+    img <- null
+    BEGIN TRY
+        img <- ImageIO.read(url)
+        ALL_IMAGES.put(url, img)
+    END TRY
+    BEGIN CATCH e
+        RETURN none
+    END CATCH
+
+    RETURN getImg(url)
+END getImg
+
+BEGIN clone (original)
+    newOne <- NEW BufferedImage(original.getWidth(none), original.getHeight(none), BufferedImage.TYPE_INT_ARGB)
+    newOne.getGraphics().drawImg(original, 0, 0, none)
+    RETURN newOne
+END clone    

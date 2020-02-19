@@ -1,0 +1,96 @@
+BEGIN squareParser.setUpHashMap ()
+    module <- r.getModule("refs")
+
+    chars <- module.keySet().toArray()
+    fnsFromR <- module.values().toArray()
+
+    BEGIN FOR i <- 0; i < chars.length; i++
+        c <- chars[i].toString().charAt(0)
+        fn <- fnsFromR[i].toString()
+
+        fns.put(c, fn)
+    END FOR
+END squareParser.setUpHashMap
+
+BEGIN squareParser.squareParser(reader)
+    this.r <- reader
+
+    w <- main.NUM_OF_TILES_WIDTH
+    h <- main.NUM_OF_TILES_HEIGHT
+    fns <- new HashMap<>()
+    setUpHashMap()
+
+    tbp <- r.get("mapDeets", "map").toString().toCharArray()
+    squares <- new Square[w][h]
+
+    x <- 0
+    y <- 0
+
+    BEGIN FOR c : tbp
+        fn <- fns.get(c)
+
+        newSquare <- none
+        ici <- new Coordinate(x, y)
+
+        BEGIN SWITCH fn
+            BEGIN CASE "general_big.png"
+                newOne <- new pathSquare()
+                BREAK
+            END CASE    
+            BEGIN CASE "happy_big.png"
+                newOne <- new homeBase()
+                BREAK
+            END CASE
+            BEGIN CASE "satan_big.png"
+                newOne <- new PathSquare()
+                satan <- ici
+                BREAK
+            END CASE
+            BEGIN CASE "turret_base_big.png"
+                newOne <- new turretSquare()
+                BREAK
+            END CASE
+            BEGIN CASE "nothing_big.png"
+                newOne <- new nothingSquare()
+                BREAK
+            END CASE    
+            BEGIN CASE DEFAULT
+                newOne <- new nothingSquare()
+                BREAK
+            END CASE
+        END SWITCH
+
+        squares[x][y] <- newOne
+
+        x++
+
+        BEGIN IF x == w
+            x <- 0
+            y++
+        END IF
+    END FOR                 
+END squareParser.squareParser
+
+BEGIN squareCollection.getCoordinates (tbp)
+    path = new ArrayList<Coordinate>()
+
+    chars = tbp.toCharArray()
+
+    BEGIN FOR i <- 0; i < chars.length; i+=4
+        xStr <- chars[i] + "" + chars[i + 1]
+        yStr <- chars[i + 2] + "" + chars[i + 3]
+
+        BEGIN IF !main.INT_REGEX.matcher(xStr).matches() OR !main.INT_REGEX.matcher(yStr).matches()
+            CONTINUE
+        END IF
+
+        x <- Integer.parseInt(xStr)
+        y <- Integer.parseInt(yStr)
+
+        newOne <- new Coordinate(x, y)
+        path.add(newOne)
+
+    END FOR
+
+    RETURN path
+END squareCollection.getCoordinates        

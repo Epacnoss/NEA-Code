@@ -1,0 +1,73 @@
+BEGIN directionTo (other)
+    equal <- this.equals(other)
+    BEGIN IF equal
+        RETURN dir.N
+    END IF
+
+    xDist <- x - other.x
+    yDist <- y - other.y
+
+    xGreater <- Math.abs(xDist) > Math.abs(yDist)
+
+    BEGIN IF !xGreater
+        BEGIN IF yDist < 0
+            RETURN dir.S
+        END IF
+        BEGIN ELSE
+            RETURN dir.N
+        END ELSE
+    END IF
+    BEGIN ELSE
+        BEGIN IF xDist < 0
+            RETURN dir.E
+        END IF
+        BEGIN ELSE
+            RETURN dir.W
+        END ELSE                     
+    END ELSE
+END directionTo
+
+BEGIN parseFromTS (tbp)
+    BEGIN TRY
+        BEGIN IF !COORDINATE_REGEX.matcher(tbp).matches()
+            RETURN TurretFrame.NULL_COORD
+        END IF
+
+        xIndexStart <- tbp.indexOf('x') + 2
+        xIndexEnd <- tbp.indexOf('y') - 2
+
+        yIndexStart <- tbp.indexOf('y') + 2;
+        yIndexEnd <- tbp.length() - 1
+
+        xStr <- tbp.substring(xIndexStart, xIndexEnd)
+        yStr <- tbp.substring(yIndexStart, yIndexEnd) 
+
+        BEGIN IF !main.INT_REGEX.matcher(xStr).matches() OR !main.INT_REGEX.matcher(yStr).matches()
+            RETURN TurretFrame.NULL_COORD
+        END IF    
+
+        x <- Integer.parseInt(xStr)
+        y <- Integer.parseInt(yStr)    
+
+        RETURN NEW Coordinate(x, y)
+END parseFromTS
+
+BEGIN compareTo (other)
+    BEGIN IF this.equals(other)
+        RETURN 0
+    END IF
+
+    xComparison <- Integer.compare(x, other.x)
+    yComparison <- Integer.compare(y, other.y)
+
+    BEGIN IF yComparison != 0
+        RETURN yComparison
+    END IF
+    BEGIN ELIF xComparison != 0
+        RETURN xComparison
+    END ELIF
+    BEGIN ELSE
+        RETURN 0
+    END ELSE
+END compareTo
+

@@ -1,0 +1,61 @@
+BEGIN turnFromArrToScrnPlusHalfTile (original, overrideHalf)
+    bigX <- original.getX() * main.TILE_WIDTH
+    bigY <- original.getY() * main.TILE_HEIGHT
+
+    smallX <- overrideHalf.getX() / 2
+    smallY <- overrideHalf.getY() / 2
+
+    x <- bigX + smallX
+    y <- bigY + smallY
+
+    fin <- new Coordinate(x, y)
+    RETURN fin
+END turnFromArrToScrnPlusHalfTile
+
+BEGIN changeX (dst)
+    newXInTile <- getXYInTile().getX() + dst
+    newXInArr <- getXYInArr().getX()
+
+    oldYTile <- getXYInTile().getY()
+    oldYArr <- getXYInArr.getY()
+
+    BEGIN IF newXInTile < 0
+        newXInTile += main.TILE_WIDTH
+        newXInArr--
+
+        BEGIN IF newXInTile < 0
+            newXInTile <- 0
+        END IF
+    END IF
+    BEGIN ELIF newXInTile > main.TILE_WIDTH
+        newXInTile -= main.TILE_WIDTH
+        newXInArr++
+
+        BEGIN IF newXInTile >= main.TILE_WIDTH
+            newXInTile <- main.TILE_WIDTH - 1
+        END IF
+    END ELIF
+
+    BEGIN IF newXInArr < 0
+        newXInArr <- 0
+    END IF
+    BEGIN ELIF newXInArr >= main.NUM_OF_TILES_WIDTH
+        newXInArr <- main.NUM_OF_TILES_WIDTH - 1
+    END ELIF
+
+    XYInArr -> new Coordinate(newXInArr, oldYArr)
+    XYInTile -> new Coordinate(newXInTile, oldYTile)
+END changeX
+
+BEGIN addHitBoxTolerances (onScrn, HITBOX)
+    currentX <- onScrn.getX()
+    currentY <- onScrn.getY()
+
+    addedX <- -HITBOX.getX()
+    addedY <- -HITBOX.getY()
+
+    onScrn.setX(currentX + addedX)
+    onScrn.setY(currentY + addedY)
+
+    RETURN onScrn
+END addHitBoxTolerances    

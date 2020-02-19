@@ -6,15 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="adafda04-aca3-4402-bcfb-4f1651a3f54a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NEA/META-INF/NEA.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NEA/classes/render/mustBeRendered/Entity/baseEntity/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NEA/classes/render/mustBeRendered/Entity/baseEntity/Entity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NEA/classes/render/mustBeRendered/Entity/turret/turretActual.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NEA/classes/render/mustBeRendered/Entity/turret/turretActual.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NEA/main/main$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NEA/main/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NEA/main/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/turret/turretActual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/turret/turretActual.java" afterDir="false" />
-    </list>
+    <list default="true" id="adafda04-aca3-4402-bcfb-4f1651a3f54a" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -162,7 +154,7 @@
       <workItem from="1581864598232" duration="2813000" />
       <workItem from="1581931192277" duration="16626000" />
       <workItem from="1582016413613" duration="20790000" />
-      <workItem from="1582105270229" duration="2736000" />
+      <workItem from="1582105270229" duration="2984000" />
     </task>
     <task id="LOCAL-00001" summary="change vcs.xml and workspace.xml, to allow for commits inside IntelliJ">
       <created>1582106040143</created>
@@ -192,7 +184,28 @@
       <option name="project" value="LOCAL" />
       <updated>1582107634004</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add enemeyFilter to .class files">
+      <created>1582109610403</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1582109610403</updated>
+    </task>
+    <task id="LOCAL-00006" summary="update .xml">
+      <created>1582109630086</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1582109630086</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add hasToWait to turretActual to make it better so it doesn't wait every time if there are no enemies">
+      <created>1582109666425</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1582109666425</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,7 +233,10 @@
     <MESSAGE value="update workspace.xml.&#10;&#10;change the setXYInArr and setXYInTile methods in Entity to be protected rather than public" />
     <MESSAGE value="update workspace.xml.&#10;&#10;make the isDone method abstract to show that I can use abstract methods - and then implement that in the turret class." />
     <MESSAGE value="add .gitignore to stop all of the workspace.xml updates." />
-    <option name="LAST_COMMIT_MESSAGE" value="add .gitignore to stop all of the workspace.xml updates." />
+    <MESSAGE value="add enemeyFilter to .class files" />
+    <MESSAGE value="update .xml" />
+    <MESSAGE value="add hasToWait to turretActual to make it better so it doesn't wait every time if there are no enemies" />
+    <option name="LAST_COMMIT_MESSAGE" value="add hasToWait to turretActual to make it better so it doesn't wait every time if there are no enemies" />
   </component>
   <component name="WindowStateProjectService">
     <state x="283" y="49" key="#Code_Folding" timestamp="1581847088674">
@@ -311,10 +327,10 @@
     </state>
     <state x="677" y="200" width="474" height="560" key="#xdebugger.evaluate/0.0.1366.768@0.0.1366.768" timestamp="1582046721373" />
     <state x="878" y="206" key="#xdebugger.evaluate/0.0.1920.1080@0.0.1920.1080" timestamp="1581358982048" />
-    <state x="328" y="23" width="787" height="745" key="CommitChangelistDialog2" timestamp="1582109629634">
+    <state x="328" y="23" width="787" height="745" key="CommitChangelistDialog2" timestamp="1582109665476">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="328" y="23" width="787" height="745" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1582109629634" />
+    <state x="328" y="23" width="787" height="745" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1582109665476" />
     <state x="429" y="0" key="Diagram.Print.Preview.Dialog" timestamp="1581946094225">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
