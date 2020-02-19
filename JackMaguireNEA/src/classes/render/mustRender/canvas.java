@@ -15,10 +15,13 @@ import classes.render.mustBeRendered.square.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
+import java.util.StringJoiner;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Predicate;
 
 public class canvas extends JComponent { //canvas class to render everything
+
+    private static final Predicate<Entity> NULL_PREDICATE = e -> e == null; //nullPredicate - a check that returns true if the entity is null
 
     private squareCollection sqc; //squares
     private ArrayList<Entity> entities; //all entites
@@ -93,35 +96,12 @@ public class canvas extends JComponent { //canvas class to render everything
 
             int score = wm.getEnemiesSpawned() * (pm.startHearts() - pm.getHearts()); //get the score
 
-            StringBuilder lossTxtBuilder = new StringBuilder();
-            lossTxtBuilder.append("You lost..." + "\n");
-            lossTxtBuilder.append("Score: " + score + "\n");
+            StringJoiner lossTxtBuilder = new StringJoiner("\n");
+            lossTxtBuilder.add("You lost...");
+            lossTxtBuilder.add("Score: " + score);
             String txt = lossTxtBuilder.toString(); //loss text
 
-            vCanvas.getGraphics().drawString(txt, main.TILE_WIDTH, main.TILE_HEIGHT); //draw that text
-
-
-            for (int y = 0; y < main.NUM_OF_TILES_HEIGHT; y++) {
-                for (int x = 0; x < main.NUM_OF_TILES_WIDTH; x++) { //for every tile going across the rows then down and repeat
-                    for (int i = 0; i < 256; i++) {
-                        vCanvas.getGraphics().drawImage(RED_IMGS[i], x * main.TILE_WIDTH, y * main.TILE_HEIGHT, null); //draw the red image using the x and y as positions
-                        vCanvas.getGraphics().drawString(txt, main.TILE_WIDTH, main.TILE_HEIGHT); //draw death text
-
-                        repaint(); //repaint
-
-                        try {
-                            TimeUnit.MILLISECONDS.sleep(DIFFERENCE_BETWEEN_COLOUR_CHANGE); //sleep so player can see the change
-                        } catch (InterruptedException e) {
-                            System.out.println("DIFF BETWEEN COLOUR CHANGE INTERRUPTED");
-                        }
-                    }
-                    try {
-                        TimeUnit.MILLISECONDS.sleep(DIFFERENCE_BETWEEN_SQUARES); //sleep so player can see larger change
-                    } catch (InterruptedException e) {
-                        System.out.println("DIFF BETWEEN SQUARES CHANGE INTERRUPTED");
-                    }
-                }
-            }
+            dieOrWin(RED_IMGS, txt);
 
         };
         deadThread = new Thread(dead); // create deathThread
@@ -130,35 +110,13 @@ public class canvas extends JComponent { //canvas class to render everything
 
             int score = pm.getMoney() + pm.getHearts() * 10;
 
-            StringBuilder winTxtBuilder = new StringBuilder();
-            winTxtBuilder.append("You won!" + "\n");
-            winTxtBuilder.append("Score: " + score + "\n");
+            StringJoiner winTxtBuilder = new StringJoiner("\n");
+            winTxtBuilder.add("You won!");
+            winTxtBuilder.add("Score: " + score);
             String txt = winTxtBuilder.toString(); //win message
 
-            vCanvas.getGraphics().drawString(txt, main.TILE_WIDTH, main.TILE_HEIGHT);
+            dieOrWin(GREEN_IMGS, txt);
 
-
-            for (int y = 0; y < main.NUM_OF_TILES_HEIGHT; y++) {
-                for (int x = 0; x < main.NUM_OF_TILES_WIDTH; x++) {
-                    for (int i = 0; i < 256; i++) {
-                        vCanvas.getGraphics().drawImage(GREEN_IMGS[i], x * main.TILE_WIDTH, y * main.TILE_HEIGHT, null); //draw green image
-                        vCanvas.getGraphics().drawString(txt, main.TILE_WIDTH, main.TILE_HEIGHT);
-
-                        repaint();
-
-                        try {
-                            TimeUnit.MILLISECONDS.sleep(DIFFERENCE_BETWEEN_COLOUR_CHANGE);
-                        } catch (InterruptedException e) {
-                            System.out.println("DIFF BETWEEN COLOUR CHANGE INTERRUPTED");
-                        }
-                    }
-                    try {
-                        TimeUnit.MILLISECONDS.sleep(DIFFERENCE_BETWEEN_SQUARES);
-                    } catch (InterruptedException e) {
-                        System.out.println("DIFF BETWEEN SQUARES CHANGE INTERRUPTED");
-                    }
-                }
-            }
         };
         winThread = new Thread(won); //create winThread
     }
@@ -203,24 +161,14 @@ public class canvas extends JComponent { //canvas class to render everything
             }
 
             ArrayList<Entity> temp = ((ArrayList<Entity>) entities.clone()); //temporary cloned list to avoid concurrentModificationExceptions
-            Predicate<Entity> nullPredicate = entity -> { //nullPredicate - a check that returns true if the entity is null
-                if (entity == null)
-                    return true;
-                return false;
-            };
 
-            temp.removeIf(nullPredicate); // remove all entities if they follow the nullpredicate - if they are null
+            temp.removeIf(NULL_PREDICATE); // remove all entities if they follow the nullpredicate - if they are null
 
             if(temp.size() != 0) { //if we have more than one entity
                 for (Entity entity : temp) {
-                    if (entity == null){ //double check
-                        System.out.println("WHAT A PAIN");
-                        continue;
-                    }
-
 
                     try {
-                        Image img; //get the image of the enemy
+                        Image img = null; //get the image of the enemy
 
                         switch (entity.getType()) {
                             case enemy -> { //check that if the enemy hasn't been spawned yet - don't render it
@@ -228,8 +176,6 @@ public class canvas extends JComponent { //canvas class to render everything
 
                                 if(casted.haveIBeenSpawnedYet())
                                     img = entity.getImg();
-                                else
-                                    img = null;
 
                                 break;
                             }
@@ -275,5 +221,32 @@ public class canvas extends JComponent { //canvas class to render everything
 
     public boolean hasFinishedRendering () {
         return finishedRendering;
+    }
+
+    private void dieOrWin(BufferedImage[] imgs, String txt) {
+        vCanvas.getGraphics().drawString(txt, main.TILE_WIDTH, main.TILE_HEIGHT);
+
+
+        for (int y = 0; y < main.NUM_OF_TILES_HEIGHT; y++) {
+            for (int x = 0; x < main.NUM_OF_TILES_WIDTH; x++) {
+                for (int i = 0; i < 256; i++) {
+                    vCanvas.getGraphics().drawImage(imgs[i], x * main.TILE_WIDTH, y * main.TILE_HEIGHT, null); //draw image
+                    vCanvas.getGraphics().drawString(txt, main.TILE_WIDTH, main.TILE_HEIGHT);
+
+                    repaint();
+
+                    try {
+                        TimeUnit.MILLISECONDS.sleep(DIFFERENCE_BETWEEN_COLOUR_CHANGE);
+                    } catch (InterruptedException e) {
+                        System.out.println("DIFF BETWEEN COLOUR CHANGE INTERRUPTED");
+                    }
+                }
+                try {
+                    TimeUnit.MILLISECONDS.sleep(DIFFERENCE_BETWEEN_SQUARES);
+                } catch (InterruptedException e) {
+                    System.out.println("DIFF BETWEEN SQUARES CHANGE INTERRUPTED");
+                }
+            }
+        }
     }
 }
