@@ -38,7 +38,7 @@ public class TurretFrame extends JPanel { //turret info and player info JPanel
 
 
         buttonPanel = new JPanel(); //init buttonPanel
-        URL url = null; //get the icon url
+        URL url; //get the icon url
         try {
             url = new URL(main.ICON_LOCATIONS + "XYIcon.png");
         } catch (MalformedURLException e) {
