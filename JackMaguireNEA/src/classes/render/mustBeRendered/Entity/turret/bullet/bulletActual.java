@@ -57,7 +57,7 @@ public class bulletActual extends Entity { //bullet class
                         enemyToHit.damage(dmg); //'hit' and damage the enmemy
                         hit = true; //we have hit, so the loop can close
                         System.out.println("Bullet and Enemy in a tree, K-I-L-L-I-N-G");
-                        return; //close loop
+                        return;  //close loop
                     }
                 }
 
