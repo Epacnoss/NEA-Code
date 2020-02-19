@@ -1,0 +1,35 @@
+turretActual.runThread <- NEW Thread(() -> {
+    BEGIN WHILE !pm.isDone() AND stillWorking
+        BEGIN TRY
+            BEGIN IF hasToWait
+                TimeUnit.MILLISECONDS.sleep(differenceMs)
+            END IF
+            BEGIN ELSE
+                hasToWait <- TRUE
+            END ELSE    
+        END TRY
+        BEGIN CATCH e
+            PRINT "Cooldown violated"
+        END CATCH
+
+        enemies <- enemyFilter.filterEnemies(entities.clone(), turret.getRangeInt(), getXYInArr().clone())
+
+        BEGIN IF enemies.size() != 0
+            enemyToHit <- enemies.get(0)
+            bulletToHitIt <- new bulletActual(getXYInArr.clone(), turret.getBulletFn(), turret.getBulletSpd(), turret.getRangeInt())
+            shotsFired.add(bulletToHitIt)
+        END IF
+        BEGIN ELSE
+            hasToWait <- FALSE
+        END ELSE
+
+        BEGIN FOR entity : shotsFired.clone()
+
+            bullet <- (bulletActual) entity
+
+            BEGIN IF ba.isDone()
+                shotsFired.remove(entity)
+                PRINT "Bullet removed"
+            END IF
+        END FOR            
+})
