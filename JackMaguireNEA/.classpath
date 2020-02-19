@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="Prototypes/Censorer/src"/>
+	<classpathentry kind="src" path="Prototypes/CfgReader/src"/>
+	<classpathentry kind="src" path="Prototypes/MainMenu/src"/>
+	<classpathentry kind="src" path="Prototypes/TowerDefenceSquareRenderer/src"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="out/artifacts/NEA_jar/NEA.jar"/>
+	<classpathentry kind="lib" path="Prototypes/TowerDefenceSquareRenderer/out/artifacts/TowerDefenceSquareRenderer_jar/TowerDefenceSquareRenderer.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="Prototypes/Censorer/out/production/Censorer"/>
+</classpath>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>classes.render.mustBeRendered.Entity.baseEntity.Entity</OriginalElement>
+  <nodes>
+    <node x="4605.314006522387" y="1463.0">classes.render.mustBeRendered.square.squareParser</node>
+    <node x="5276.364673948575" y="5724.0">classes.render.mustBeRendered.square.Square</node>
+    <node x="5745.847417867792" y="623.0">classes.render.mustBeRendered.square.types.nothingSquare</node>
+    <node x="3329.9365002323475" y="2022.0">classes.render.mustBeRendered.Entity.enemy.enemyTemplate</node>
+    <node x="1452.565288111135" y="417.0">Gameplay.player.PlayerManager</node>
+    <node x="5215.847417867792" y="623.0">classes.render.mustBeRendered.square.types.cornerSquare</node>
+    <node x="2583.7142780101253" y="461.0">classes.util.coordinate.Coordinate</node>
+    <node x="1656.231534090909" y="3423.0">classes.render.mustBeRendered.Entity.turret.turretActual</node>
+    <node x="2445.7142780101253" y="601.0">classes.render.mustBeRendered.Entity.baseEntity.entityType</node>
+    <node x="1434.690288111135" y="239.0">classes.util.CustomActionListeners.BooleanChangeEvent</node>
+    <node x="2280.238236034604" y="1913.0">classes.render.mustBeRendered.Entity.baseEntity.Entity</node>
+    <node x="5028.091862312236" y="623.0">classes.render.mustBeRendered.square.types.pathSquare</node>
+    <node x="1661.190288111135" y="0.0">classes.util.CustomActionListeners.BooleanChangeListener</node>
+    <node x="997.7382360346037" y="1452.0">Gameplay.turrets.TurretFrame</node>
+    <node x="2866.269833565681" y="2120.0">Gameplay.waves.Wave</node>
+    <node x="3258.3490756579763" y="4609.0">main.main</node>
+    <node x="3147.863583565681" y="493.0">classes.util.CfgReader.CfgReader</node>
+    <node x="1222.565288111135" y="623.0">Gameplay.turrets.TurretNotFoundException</node>
+    <node x="4527.003562837464" y="3952.0">classes.render.mustRender.canvas</node>
+    <node x="3615.6031668990145" y="2612.0">classes.render.mustBeRendered.Entity.enemy.enemyActual</node>
+    <node x="1513.440288111135" y="103.0">classes.util.CustomActionListeners.BooleanChangeDispatcher</node>
+    <node x="5412.847417867792" y="623.0">classes.render.mustBeRendered.square.types.homeBase</node>
+    <node x="922.565288111135" y="537.0">classes.util.resources.ResourceManager</node>
+    <node x="5554.847417867792" y="623.0">classes.render.mustBeRendered.square.types.enemyStartSquare</node>
+    <node x="10.5" y="1518.0">classes.render.mustBeRendered.Entity.turret.turretDictionary</node>
+    <node x="3335.7973398557197" y="3401.0">Gameplay.waves.waveManager</node>
+    <node x="3957.019833565681" y="2012.0">classes.render.mustBeRendered.square.squareCollection</node>
+    <node x="286.17466311113503" y="439.0">classes.render.mustBeRendered.Entity.turret.turretTemplate</node>
+    <node x="3231.519833565681" y="2853.0">classes.render.mustBeRendered.Entity.enemy.enemyDictionary</node>
+    <node x="1088.1029054357787" y="3995.0">Gameplay.turrets.TurretManager</node>
+    <node x="5270.864673948575" y="5827.0">classes.render.mustBeRendered.square.types.scenerySquare</node>
+    <node x="2743.238236034604" y="2874.0">Gameplay.waves.WaveParser</node>
+    <node x="3275.4642780101253" y="206.0">classes.util.coordinate.dir</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="classes.render.mustBeRendered.square.types.nothingSquare" target="classes.render.mustBeRendered.square.Square">
+      <point x="49.0" y="26.5" />
+      <point x="5868.347417867792" y="1432.0" />
+      <point x="5827.069640090014" y="1432.0" />
+      <point x="5827.069640090014" y="5704.0" />
+      <point x="5411.503562837464" y="5704.0" />
+      <point x="65.63888888888891" y="-26.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.turret.turretActual" target="classes.render.mustBeRendered.Entity.baseEntity.Entity">
+      <point x="102.90909090909099" y="-188.5" />
+      <point x="2042.140625" y="3341.0" />
+      <point x="2339.428924474772" y="3341.0" />
+      <point x="2339.428924474772" y="2522.0" />
+      <point x="2365.238236034604" y="2522.0" />
+      <point x="-136.0" y="254.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.square.types.pathSquare" target="classes.render.mustBeRendered.square.Square">
+      <point x="0.0" y="26.5" />
+      <point x="5093.091862312236" y="1392.0" />
+      <point x="5207.814006522387" y="1392.0" />
+      <point x="5207.814006522387" y="5624.0" />
+      <point x="5342.003562837464" y="5624.0" />
+      <point x="-3.861111111111086" y="-26.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.square.types.enemyStartSquare" target="classes.render.mustBeRendered.square.Square">
+      <point x="57.0" y="26.5" />
+      <point x="5697.347417867792" y="1422.0" />
+      <point x="5707.4941121029815" y="1422.0" />
+      <point x="5707.4941121029815" y="5684.0" />
+      <point x="5396.059118393019" y="5684.0" />
+      <point x="50.19444444444457" y="-26.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.square.types.cornerSquare" target="classes.render.mustBeRendered.square.Square">
+      <point x="0.0" y="26.5" />
+      <point x="5304.347417867792" y="5604.0" />
+      <point x="5357.448007281908" y="5604.0" />
+      <point x="11.583333333333258" y="-26.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.square.types.homeBase" target="classes.render.mustBeRendered.square.Square">
+      <point x="0.0" y="26.5" />
+      <point x="5473.847417867792" y="5654.0" />
+      <point x="5372.892451726353" y="5654.0" />
+      <point x="27.02777777777783" y="-26.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.enemy.enemyActual" target="classes.render.mustBeRendered.Entity.baseEntity.Entity">
+      <point x="-169.5" y="-309.5" />
+      <point x="3672.1031668990145" y="2512.0" />
+      <point x="2637.238236034604" y="2512.0" />
+      <point x="136.0" y="254.5" />
+    </edge>
+    <edge source="Gameplay.player.PlayerManager" target="classes.util.CustomActionListeners.BooleanChangeDispatcher">
+      <point x="0.0" y="-232.5" />
+      <point x="1725.065288111135" y="387.0" />
+      <point x="1846.440288111135" y="387.0" />
+      <point x="1846.440288111135" y="181.0" />
+      <point x="1833.440288111135" y="181.0" />
+      <point x="128.0" y="26.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.square.types.scenerySquare" target="classes.render.mustBeRendered.square.Square">
+      <point x="-37.5" y="-26.5" />
+      <point x="5308.364673948575" y="5802.0" />
+      <point x="5311.114673948575" y="5802.0" />
+      <point x="-34.75" y="26.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.06186440677966102" x="2951.5" y="2940.0" />
+  <SelectedNodes>
+    <node>classes.util.CfgReader.CfgReader</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

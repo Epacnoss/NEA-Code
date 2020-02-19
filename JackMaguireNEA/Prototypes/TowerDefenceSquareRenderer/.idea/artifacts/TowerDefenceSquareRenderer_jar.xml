@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="TowerDefenceSquareRenderer:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/TowerDefenceSquareRenderer_jar</output-path>
+    <root id="archive" name="TowerDefenceSquareRenderer.jar">
+      <element id="module-output" name="TowerDefenceSquareRenderer" />
+    </root>
+  </artifact>
+</component>

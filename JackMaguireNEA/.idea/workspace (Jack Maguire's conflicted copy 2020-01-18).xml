@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="adafda04-aca3-4402-bcfb-4f1651a3f54a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../JackMaguireNEA.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../JackMaguireNEA.docx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1VFOPCV6BkSbsQv5UPzFwABTVLP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="experimental" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="classes.util" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Prototypes/CfgReader/src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/CfgReader" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.main" />
+      <module name="NEA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="adafda04-aca3-4402-bcfb-4f1651a3f54a" name="Default Changelist" comment="" />
+      <created>1576845349882</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576845349882</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="283" y="49" key="#Code_Folding" timestamp="1577969098784">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="283" y="49" key="#Code_Folding/0.0.1366.768@0.0.1366.768" timestamp="1577969098784" />
+    <state x="697" y="150" key="#com.intellij.ide.util.MemberChooser" timestamp="1578851497612">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="496" y="107" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1578042097298" />
+    <state x="697" y="150" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1578851497612" />
+    <state x="576" y="310" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1579021289454">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="576" y="310" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1366.768@0.0.1366.768" timestamp="1579021289454" />
+    <state x="810" y="436" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1578338782427" />
+    <state x="304" y="66" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1577033654233">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="304" y="66" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.0.1366.768@0.0.1366.768" timestamp="1577033654233" />
+    <state x="471" y="297" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1576845603085">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="471" y="297" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1366.768@0.0.1366.768" timestamp="1576845603085" />
+    <state x="372" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1577039694255">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="372" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.768@0.0.1366.768" timestamp="1577039694255" />
+    <state x="698" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578847856549">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="698" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1578847856549" />
+    <state x="849" y="250" key="#xdebugger.evaluate" timestamp="1578768077518">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="849" y="250" key="#xdebugger.evaluate/0.0.1920.1080@0.0.1920.1080" timestamp="1578768077518" />
+    <state width="1324" height="250" key="GridCell.Tab.0.bottom" timestamp="1579350833857">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="250" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1579350833857" />
+    <state width="1878" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1578864102495" />
+    <state width="1324" height="202" key="GridCell.Tab.0.bottom/0.23.1366.745@0.23.1366.745" timestamp="1579025731746" />
+    <state width="1324" height="250" key="GridCell.Tab.0.center" timestamp="1579350833852">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="250" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1579350833852" />
+    <state width="1878" height="375" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1578864102493" />
+    <state width="1324" height="202" key="GridCell.Tab.0.center/0.23.1366.745@0.23.1366.745" timestamp="1579025731740" />
+    <state width="1324" height="250" key="GridCell.Tab.0.left" timestamp="1579350833850">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="250" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1579350833850" />
+    <state width="1878" height="375" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1578864102493" />
+    <state width="1324" height="202" key="GridCell.Tab.0.left/0.23.1366.745@0.23.1366.745" timestamp="1579025731718" />
+    <state width="1324" height="250" key="GridCell.Tab.0.right" timestamp="1579350834113">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="250" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1579350834113" />
+    <state width="1878" height="375" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1578864102494" />
+    <state width="1324" height="202" key="GridCell.Tab.0.right/0.23.1366.745@0.23.1366.745" timestamp="1579025731743" />
+    <state width="1878" height="375" key="GridCell.Tab.1.bottom" timestamp="1578864102498">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="375" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1578864102498" />
+    <state width="1878" height="375" key="GridCell.Tab.1.bottom/0.23.1920.995@0.23.1920.995" timestamp="1578846322813" />
+    <state width="1878" height="375" key="GridCell.Tab.1.center" timestamp="1578864102496">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="375" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1578864102496" />
+    <state width="1878" height="375" key="GridCell.Tab.1.center/0.23.1920.995@0.23.1920.995" timestamp="1578846322811" />
+    <state width="1878" height="375" key="GridCell.Tab.1.left" timestamp="1578864102495">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="375" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1578864102495" />
+    <state width="1878" height="375" key="GridCell.Tab.1.left/0.23.1920.995@0.23.1920.995" timestamp="1578846322811" />
+    <state width="1878" height="375" key="GridCell.Tab.1.right" timestamp="1578864102497">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="375" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1578864102497" />
+    <state width="1878" height="375" key="GridCell.Tab.1.right/0.23.1920.995@0.23.1920.995" timestamp="1578846322812" />
+    <state x="270" y="32" key="SettingsEditor" timestamp="1578851211668">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="192" y="23" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1578041730128" />
+    <state x="270" y="32" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1578851211668" />
+    <state width="960" height="540" key="XDebugger.FullValuePopup" timestamp="1578765020743">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="960" height="540" key="XDebugger.FullValuePopup/0.0.1920.1080@0.0.1920.1080" timestamp="1578765020743" />
+    <state x="376" y="233" key="com.intellij.ide.util.TipDialog" timestamp="1579350713550">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="376" y="233" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1579350713550" />
+    <state x="528" y="328" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1578943357086" />
+    <state x="528" y="325" key="com.intellij.ide.util.TipDialog/0.23.1920.996@0.23.1920.996" timestamp="1578764293377" />
+    <state x="488" y="308" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577033418529">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="488" y="308" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.768@0.0.1366.768" timestamp="1577033418529" />
+    <state x="626" y="175" width="667" height="729" key="find.popup" timestamp="1578852078621">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="626" y="175" width="667" height="729" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1578852078621" />
+    <state x="354" y="162" key="new project wizard" timestamp="1578505022865">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="354" y="162" key="new project wizard/0.0.1920.1080@0.0.1920.1080" timestamp="1578505022865" />
+    <state x="625" y="255" key="run.anything.popup" timestamp="1578510653837">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="625" y="255" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1578510653837" />
+    <state x="489" y="129" width="942" height="223" key="search.everywhere.popup" timestamp="1578847839070">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="348" y="92" width="670" height="158" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1578042040742" />
+    <state x="489" y="129" width="942" height="223" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1578847839070" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/classes/square/sqaureParser.java</url>
+          <line>88</line>
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/classes/canvas.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/classes/square/sqaureParser.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/classes/square/sqaureParser.java</url>
+          <line>77</line>
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/classes/square/sqaureParser.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/classes/square/sqaureParser.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/classes/square/sqaureParser.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/classes/square/sqaureParser.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="107" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/classes/square/sqaureParser.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/classes/square/sqaureParser.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="110" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/classes/square/sqaureParser.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="111" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/classes/square/sqaureParser.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/classes/square/sqaureParser.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/classes/square/sqaureParser.java</url>
+          <line>87</line>
+          <properties class="classes.square.sqaureParser" method="getSquares">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/classes/square/sqaureParser.java</url>
+          <line>11</line>
+          <properties field="squares" class="classes.square.sqaureParser" />
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/classes/square/sqaureParser.java</url>
+          <line>12</line>
+          <properties field="fns" class="classes.square.sqaureParser" />
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
