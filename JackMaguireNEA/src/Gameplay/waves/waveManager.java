@@ -202,8 +202,7 @@ public class waveManager { //class for spawning in enemies
     private boolean hasThePCWon () { //checker method for if the player has won (PC referring to Player Character)
         if(enemiesSpawned == totEnemies) { //if we have spawned all of the enemies
             for (Entity enemyActual : enemyActuals) { // for each of the enemies remaining
-                enemyActual casted = ((enemyActual) enemyActual); //cast it
-                if(casted.isDone())
+                if(enemyActual.isDone())
                     return false;
             }
 
