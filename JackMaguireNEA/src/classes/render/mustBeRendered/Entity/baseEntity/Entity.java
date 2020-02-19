@@ -44,6 +44,9 @@ public abstract class Entity implements Comparable<Entity> { //Entity class - ea
             case turret:
                 fqdn = main.TURRET_IMAGES_LOC + fn;
                 CENTRE_OF_HITBOX = new Coordinate(main.TURRET_WIDTH / 2, main.TURRET_HEIGHT / 2);
+            default:
+                fqdn = fn;
+                CENTRE_OF_HITBOX = Coordinate.ZERO.clone();
         }
 
         try {
