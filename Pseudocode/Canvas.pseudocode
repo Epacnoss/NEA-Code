@@ -1,0 +1,113 @@
+BEGIN dieOrWin (imgs, txt)
+    vCanvas.getGraphics().drawString(txt, main.TILE_WIDTH, main.TILE_HEIGHT)
+
+    BEGIN FOR y <- 0; y < main.NUM_OF_TILES_HEIGHT; y++
+        BEGIN FOR x <- 0; x < main.NUM_OF_TILES_WIDTH; x++
+            BEGIN FOR i <- 0; i < 256; i++
+                vCanvas.getGraphics().drawImage(imgs[i], x * main.TILE_WIDTH, y * main.TILE_HEIGHT, none)
+                vCanvas.getGraphics().drawImage(txt, main.TILE_WIDTH, main.TILE_HEIGHT)
+
+                repaint()
+
+                BEGIN TRY
+                    TimeUnit.MILLISECONDS.sleep(DIFFERENCE_BETWEEN_COLOUR_CHANGE)
+                END TRY
+                BEGIN CATCH e
+                    PRINT "DIFF BETWEEN COLOUR CHANGE INTERRUPTED"
+                END CATCH
+            END FOR
+        END FOR
+
+        BEGIN TRY
+            TimeUnit.MILLISECONDS.sleep(DIFFERENCE_BETWEEN_SQUARES)
+        END TRY
+        BEGIN CATCH e
+            PRINT "DIFF BETWEEN SQUARES CHANGE INTERRUPTED"    
+        END CATCH
+    END FOR
+END dieOrWin
+
+BEGIN paintComponent (g)
+    super.paintComponent(g)
+    finishedRendering <- FALSE
+
+    vCanvas <- new BufferedImage(
+        (getWidth() == 0 ? main.WINDOW_WIDTH : getWidth()),
+        (getHeight() == 0 ? main.WINDOW_HEIGHT : getHeight()),
+        BufferedImage.TYPE_INT_ARGB)
+
+    xOnScrn <- 0
+    yOnScrn <- 0
+
+    w <- main.TILE_WIDTH
+    h <- main.TILE_HEIGHT
+
+    squares <- sqc.getSquares()
+
+    BEGIN FOR yInArr <- 0; yInArr < squares[0].length; yInArr++
+        BEGIN FOR xInArr <- 0; xInArr < squares[0].length; xInArr++
+            img <- squares[xInArr][yInArr]
+            vCanvas.getGraphics().drawImage(img, xOnScrn, yOnScrn, none)
+
+            xOnScrn += w
+        END FOR
+
+        xOnScrn <- 0
+        yOnScrn += h
+    END FOR
+
+    temp <- entities.clone()
+    temp.removeIf(NULL_PREDICATE)
+
+    BEGIN IF temp.size() != 0
+        BEGIN FOR e : temp
+            BEGIN TRY
+                img <- none
+
+                BEGIN SWITCH e.getType()
+                    BEGIN CASE enemy
+                        casted <- (enemyActual) e
+
+                        BEGIN IF casted.haveIBeenSpawned()
+                            img <- casted.getImg()
+                        BREAK
+                    END CASE
+                    BEGIN CASE DEFAULT
+                        img <- e.getImg()
+                        BREAK
+                    END CASE
+                END SWITCH
+
+                BEGIN IF img != none
+                    x <- e.getXYOnScrn().getX()
+                    y <- e.getXYOnScrn().getY()
+
+                    vCanvas.getGraphics().drawImage(img, x, y, null)
+                END IF
+            END TRY
+            BEGIN CATCH e
+                PRINT "ENTITY NOT FOUND"
+                e.printStackTrace()
+            END CATCH
+        END FOR
+    END IF
+    BEGIN ELSE
+        BEGIN IF !deathStarted && !winStarted
+            BEGIN IF playerIsDead
+                deathStarted <- TRUE
+                deadThread.start()
+            END IF
+            BEGIN ELIF playerHasWon
+                winStarted <- TRUE
+                winThread.start()
+            END ELIF
+        END IF
+    END ELSE
+
+    BEGIN IF g != none
+        g.drawImage(vCanvas, 0, 0, none)
+    
+    repaint()
+
+    finishedRendering <- TRUE
+END paintComponent
