@@ -37,7 +37,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1VFOPCV6BkSbsQv5UPzFwABTVLP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -413,10 +413,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="100" y="100" width="1166" height="568" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.768@0.0.1366.768" timestamp="1581866521506" />
-    <state x="293" y="280" key="com.intellij.ide.util.TipDialog" timestamp="1582016421642">
+    <state x="293" y="280" key="com.intellij.ide.util.TipDialog" timestamp="1582105279014">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="293" y="280" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1582016421642" />
+    <state x="293" y="280" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1582105279014" />
     <state x="868" y="299" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1581181491546" />
     <state x="293" y="280" key="com.intellij.ide.util.TipDialog/0.23.1366.745@0.23.1366.745" timestamp="1581769633773" />
     <state x="528" y="328" key="com.intellij.ide.util.TipDialog/0.23.1920.1005@0.23.1920.1005" timestamp="1580749410750" />
