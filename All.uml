@@ -1,0 +1,997 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>classes.render.mustBeRendered.Entity.baseEntity.Entity</OriginalElement>
+  <nodes>
+    <node x="2176.612874625376" y="3013.5078125">classes.render.mustBeRendered.Entity.turret.enemyFilter</node>
+    <node x="4719.691468597281" y="1454.5078125">classes.render.mustBeRendered.Entity.enemy.enemyTemplate</node>
+    <node x="81.06715302992461" y="1367.5078125">Gameplay.player.PlayerManager</node>
+    <node x="3453.458873809147" y="726.5078125">classes.util.coordinate.Coordinate</node>
+    <node x="129.25" y="878.5078125">classes.util.CustomActionListeners.BooleanChangeEvent</node>
+    <node x="2366.2288270714707" y="3631.5078125">classes.render.mustBeRendered.Entity.turret.turretActual</node>
+    <node x="2010.112874625376" y="877.5078125">classes.render.mustBeRendered.Entity.baseEntity.entityType</node>
+    <node x="2802.660605665478" y="1345.5078125">classes.render.mustBeRendered.Entity.baseEntity.Entity</node>
+    <node x="4366.869368131869" y="1585.5078125">classes.render.mustBeRendered.square</node>
+    <node x="280.9375" y="4.5078125">classes.util.CustomActionListeners.BooleanChangeListener</node>
+    <node x="1560.2667207792222" y="4141.5078125">Gameplay.turrets.TurretFrame</node>
+    <node x="5834.669838501354" y="548.5078125">Gameplay.waves.Wave</node>
+    <node x="4293.661411847805" y="5161.5078125">main.main</node>
+    <node x="5270.127726338196" y="769.5078125">classes.util.CfgReader.CfgReader</node>
+    <node x="1307.266720779222" y="569.5078125">Gameplay.turrets.TurretNotFoundException</node>
+    <node x="0.0" y="569.5078125">classes.util.CustomActionListeners.BooleanChangeDispatcher</node>
+    <node x="4295.785218597281" y="3554.5078125">classes.render.mustRender.canvas</node>
+    <node x="3557.3328178759" y="2034.5078125">classes.render.mustBeRendered.Entity.enemy.enemyActual</node>
+    <node x="3918.498668341312" y="813.5078125">classes.util.resources.ResourceManager</node>
+    <node x="5257.631202137719" y="2883.5078125">Gameplay.waves.waveManager</node>
+    <node x="519.6125000000002" y="3708.5078125">classes.render.mustBeRendered.Entity.turret.turretDictionary</node>
+    <node x="6163.274600406116" y="6186.5078125">main.ApexTurrets</node>
+    <node x="592.4875000000002" y="2883.5078125">classes.render.mustBeRendered.Entity.turret.turretTemplate</node>
+    <node x="5238.099363334123" y="2275.5078125">classes.render.mustBeRendered.Entity.enemy.enemyDictionary</node>
+    <node x="4162.0998876123895" y="16.5078125">java.lang</node>
+    <node x="1633.8913270714706" y="4560.5078125">Gameplay.turrets.TurretManager</node>
+    <node x="5852.66343829425" y="1552.5078125">Gameplay.waves.WaveParser</node>
+    <node x="2785.612874625376" y="2959.5078125">classes.render.mustBeRendered.Entity.turret.bullet.bulletActual</node>
+    <node x="3344.5828178759" y="515.5078125">classes.util.coordinate.dir</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Gameplay.turrets.TurretManager" target="classes.render.mustBeRendered.Entity.baseEntity.Entity">
+      <point x="106.42499999999995" y="-200.5" />
+      <point x="1976.8163270714706" y="4490.5078125" />
+      <point x="2606.2288270714707" y="4490.5078125" />
+      <point x="2606.2288270714707" y="4081.5078125" />
+      <point x="3177.112874625376" y="4081.5078125" />
+      <point x="3177.112874625376" y="2014.5078125" />
+      <point x="3011.3828278877" y="2014.5078125" />
+      <point x="-12.277777777777828" y="254.5" />
+    </edge>
+    <edge source="classes.util.CustomActionListeners.BooleanChangeEvent" target="java.lang">
+      <point x="127.125" y="-47.5" />
+      <point x="425.875" y="706.5078125" />
+      <point x="405.5" y="706.5078125" />
+      <point x="405.5" y="125.5078125" />
+      <point x="4168.87910839161" y="125.5078125" />
+      <point x="-51.22077922077915" y="14.5" />
+    </edge>
+    <edge source="classes.util.CfgReader.CfgReader" target="java.lang">
+      <point x="-124.125" y="-156.5" />
+      <point x="5311.502726338196" y="696.5078125" />
+      <point x="5409.402262868711" y="696.5078125" />
+      <point x="5409.402262868711" y="365.5078125" />
+      <point x="4244.203783716285" y="365.5078125" />
+      <point x="24.10389610389575" y="14.5" />
+    </edge>
+    <edge source="Gameplay.waves.waveManager" target="classes.render.mustBeRendered.Entity.enemy.enemyDictionary">
+      <point x="0.0" y="-210.5" />
+      <point x="5473.131202137719" y="2773.5078125" />
+      <point x="5513.099363334123" y="2773.5078125" />
+      <point x="110.0" y="68.5" />
+    </edge>
+    <edge source="Gameplay.waves.Wave" target="java.lang">
+      <point x="0.0" y="-47.5" />
+      <point x="5970.669838501354" y="245.5078125" />
+      <point x="4262.2817057942075" y="245.5078125" />
+      <point x="42.18181818181802" y="14.5" />
+    </edge>
+    <edge source="Gameplay.turrets.TurretFrame" target="classes.util.coordinate.Coordinate">
+      <point x="271.38461538461524" y="-144.5" />
+      <point x="2272.651336163837" y="4101.5078125" />
+      <point x="3513.8328178759" y="4101.5078125" />
+      <point x="3513.8328178759" y="1285.5078125" />
+      <point x="3550.601730952004" y="1285.5078125" />
+      <point x="-22.857142857142662" y="199.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.turret.turretActual" target="Gameplay.player.PlayerManager">
+      <point x="-180.0" y="-166.5" />
+      <point x="2378.2288270714707" y="3464.5078125" />
+      <point x="348.8194538065145" y="3464.5078125" />
+      <point x="348.8194538065145" y="2014.5078125" />
+      <point x="414.1227085854798" y="2014.5078125" />
+      <point x="60.5555555555552" y="232.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.turret.bullet.bulletActual" target="java.lang">
+      <point x="-173.18181818181802" y="-134.5" />
+      <point x="2802.931056443558" y="2803.5078125" />
+      <point x="1296.766720779222" y="2803.5078125" />
+      <point x="1296.766720779222" y="305.5078125" />
+      <point x="4195.995991508494" y="305.5078125" />
+      <point x="-24.10389610389575" y="14.5" />
+    </edge>
+    <edge source="classes.render.mustRender.canvas" target="classes.render.mustBeRendered.Entity.baseEntity.Entity">
+      <point x="-87.19999999999982" y="-243.5" />
+      <point x="4372.085218597281" y="3354.5078125" />
+      <point x="3306.4866515869244" y="3354.5078125" />
+      <point x="3306.4866515869244" y="1964.5078125" />
+      <point x="3134.160605665478" y="1964.5078125" />
+      <point x="110.5" y="254.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.enemy.enemyActual" target="classes.util.coordinate.dir">
+      <point x="-90.40000000000009" y="-309.5" />
+      <point x="3692.9328178759006" y="1894.5078125" />
+      <point x="3397.749484542567" y="1894.5078125" />
+      <point x="3397.749484542567" y="706.5078125" />
+      <point x="3416.0828178759" y="706.5078125" />
+      <point x="0.0" y="80.5" />
+    </edge>
+    <edge source="main.main" target="classes.util.coordinate.Coordinate">
+      <point x="-35.81818181818198" y="-487.5" />
+      <point x="4454.843230029623" y="5011.5078125" />
+      <point x="4030.8328178759" y="5011.5078125" />
+      <point x="4030.8328178759" y="1275.5078125" />
+      <point x="3642.0303023805754" y="1275.5078125" />
+      <point x="68.57142857142844" y="199.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.baseEntity.Entity" target="main.main">
+      <point x="61.38888888888869" y="254.5" />
+      <point x="3085.049494554367" y="1984.5078125" />
+      <point x="3284.4866515869244" y="1984.5078125" />
+      <point x="3284.4866515869244" y="5041.5078125" />
+      <point x="4419.025048211441" y="5041.5078125" />
+      <point x="-71.63636363636397" y="-487.5" />
+    </edge>
+    <edge source="classes.render.mustRender.canvas" target="classes.render.mustBeRendered.Entity.baseEntity.entityType">
+      <point x="-130.80000000000018" y="-243.5" />
+      <point x="4328.48521859728" y="3374.5078125" />
+      <point x="2057.4866515869244" y="3374.5078125" />
+      <point x="2057.4866515869244" y="1325.5078125" />
+      <point x="2056.001763514265" y="1325.5078125" />
+      <point x="-13.111111111111313" y="48.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.turret.turretActual" target="classes.render.mustBeRendered.Entity.turret.turretTemplate">
+      <point x="-132.0" y="-166.5" />
+      <point x="2426.2288270714707" y="3444.5078125" />
+      <point x="1131.4875000000002" y="3444.5078125" />
+      <point x="245.0" y="210.5" />
+    </edge>
+    <edge source="Gameplay.turrets.TurretFrame" target="Gameplay.turrets.TurretNotFoundException">
+      <point x="-67.84615384615404" y="-144.5" />
+      <point x="1933.4205669330681" y="4061.5078125" />
+      <point x="1352.4523803026532" y="4061.5078125" />
+      <point x="1352.4523803026532" y="2863.5078125" />
+      <point x="1401.958873809147" y="2863.5078125" />
+      <point x="1401.958873809147" y="706.5078125" />
+      <point x="1464.766720779222" y="706.5078125" />
+      <point x="52.5" y="26.5" />
+    </edge>
+    <edge source="main.main" target="java.lang">
+      <point x="155.21212121212102" y="-487.5" />
+      <point x="4645.873533059927" y="5111.5078125" />
+      <point x="6228.16343829425" y="5111.5078125" />
+      <point x="6228.16343829425" y="195.5078125" />
+      <point x="4269.814173326676" y="195.5078125" />
+      <point x="49.714285714286234" y="14.5" />
+    </edge>
+    <edge source="classes.util.CustomActionListeners.BooleanChangeEvent" target="classes.util.CustomActionListeners.BooleanChangeDispatcher">
+      <point x="-42.375" y="-47.5" />
+      <point x="256.375" y="706.5078125" />
+      <point x="320.0" y="706.5078125" />
+      <point x="128.0" y="26.5" />
+    </edge>
+    <edge source="Gameplay.turrets.TurretFrame" target="java.lang">
+      <point x="-203.53846153846166" y="-144.5" />
+      <point x="1797.7282592407605" y="4081.5078125" />
+      <point x="1259.2472402597405" y="4081.5078125" />
+      <point x="1259.2472402597405" y="255.5078125" />
+      <point x="4188.4635239760255" y="255.5078125" />
+      <point x="-31.636363636363967" y="14.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.enemy.enemyActual" target="classes.util.coordinate.Coordinate">
+      <point x="-30.133333333333212" y="-309.5" />
+      <point x="3753.199484542567" y="1874.5078125" />
+      <point x="3683.4383834432556" y="1874.5078125" />
+      <point x="3683.4383834432556" y="1305.5078125" />
+      <point x="3607.744588094861" y="1305.5078125" />
+      <point x="34.28571428571422" y="199.5" />
+    </edge>
+    <edge source="Gameplay.player.PlayerManager" target="java.lang">
+      <point x="227.08333333333348" y="-232.5" />
+      <point x="580.6504863632581" y="1325.5078125" />
+      <point x="500.75" y="1325.5078125" />
+      <point x="500.75" y="135.5078125" />
+      <point x="4170.385601898104" y="135.5078125" />
+      <point x="-49.714285714285325" y="14.5" />
+    </edge>
+    <edge source="main.main" target="classes.util.CfgReader.CfgReader">
+      <point x="119.39393939393904" y="-487.5" />
+      <point x="4610.055351241745" y="5081.5078125" />
+      <point x="5721.131202137719" y="5081.5078125" />
+      <point x="5721.131202137719" y="1275.5078125" />
+      <point x="5565.663440623911" y="1275.5078125" />
+      <point x="130.0357142857149" y="156.5" />
+    </edge>
+    <edge source="Gameplay.waves.waveManager" target="Gameplay.player.PlayerManager">
+      <point x="-204.15789473684163" y="-210.5" />
+      <point x="5268.973307400877" y="2753.5078125" />
+      <point x="729.2505088178796" y="2753.5078125" />
+      <point x="729.2505088178796" y="2004.5078125" />
+      <point x="535.2338196965911" y="2004.5078125" />
+      <point x="181.66666666666652" y="232.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.baseEntity.Entity" target="classes.util.coordinate.Coordinate">
+      <point x="120.5454545454545" y="-254.5" />
+      <point x="3144.2060602109323" y="1215.5078125" />
+      <point x="3470.601730952004" y="1215.5078125" />
+      <point x="-102.85714285714266" y="199.5" />
+    </edge>
+    <edge source="classes.render.mustRender.canvas" target="main.main">
+      <point x="-109.0" y="243.5" />
+      <point x="4350.285218597281" y="4121.5078125" />
+      <point x="4402.995561382393" y="4121.5078125" />
+      <point x="4402.995561382393" y="5001.5078125" />
+      <point x="4466.782623969017" y="5001.5078125" />
+      <point x="-23.87878787878799" y="-487.5" />
+    </edge>
+    <edge source="Gameplay.turrets.TurretNotFoundException" target="java.lang">
+      <point x="52.5" y="-26.5" />
+      <point x="1464.766720779222" y="325.5078125" />
+      <point x="4199.0089785214805" y="325.5078125" />
+      <point x="-21.09090909090901" y="14.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.turret.enemyFilter" target="java.lang">
+      <point x="-226.4000000000001" y="-80.5" />
+      <point x="2233.2128746253757" y="2823.5078125" />
+      <point x="1295.2602272727281" y="2823.5078125" />
+      <point x="1295.2602272727281" y="295.5078125" />
+      <point x="4194.489498002" y="295.5078125" />
+      <point x="-25.610389610389575" y="14.5" />
+    </edge>
+    <edge source="main.ApexTurrets" target="main.main">
+      <point x="-53.33333333333303" y="-26.5" />
+      <point x="6189.941267072783" y="6161.5078125" />
+      <point x="4490.661411847805" y="6161.5078125" />
+      <point x="0.0" y="487.5" />
+    </edge>
+    <edge source="Gameplay.turrets.TurretFrame" target="classes.util.resources.ResourceManager">
+      <point x="407.07692307692287" y="-144.5" />
+      <point x="2408.343643856145" y="4121.5078125" />
+      <point x="4058.498668341312" y="4121.5078125" />
+      <point x="0.0" y="112.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.enemy.enemyActual" target="main.main">
+      <point x="28.25" y="309.5" />
+      <point x="3811.5828178759" y="2853.5078125" />
+      <point x="3788.8328178759" y="2853.5078125" />
+      <point x="3788.8328178759" y="5031.5078125" />
+      <point x="4430.964442150835" y="5031.5078125" />
+      <point x="-59.69696969696997" y="-487.5" />
+    </edge>
+    <edge source="Gameplay.player.PlayerManager" target="classes.util.CustomActionListeners.BooleanChangeEvent">
+      <point x="-45.416666666666515" y="-232.5" />
+      <point x="308.1504863632581" y="1325.5078125" />
+      <point x="383.5" y="1325.5078125" />
+      <point x="84.75" y="47.5" />
+    </edge>
+    <edge source="java.lang" target="java.lang">
+      <point x="-54.23376623376623" y="14.5" />
+      <point x="4165.866121378624" y="85.5078125" />
+      <point x="4122.0998876123895" y="85.5078125" />
+      <point x="4122.0998876123895" y="27.3828125" />
+      <point x="-58.0" y="-3.625" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.turret.turretDictionary" target="classes.util.CfgReader.CfgReader">
+      <point x="85.625" y="-89.5" />
+      <point x="742.2375000000002" y="3494.5078125" />
+      <point x="5175.191468597281" y="3494.5078125" />
+      <point x="5175.191468597281" y="1295.5078125" />
+      <point x="5329.234869195339" y="1295.5078125" />
+      <point x="-106.39285714285688" y="156.5" />
+    </edge>
+    <edge source="classes.render.mustRender.canvas" target="classes.render.mustBeRendered.Entity.enemy.enemyActual">
+      <point x="-65.39999999999964" y="-243.5" />
+      <point x="4393.885218597281" y="3344.5078125" />
+      <point x="3813.208873809147" y="3344.5078125" />
+      <point x="3813.208873809147" y="2863.5078125" />
+      <point x="3868.0828178759" y="2863.5078125" />
+      <point x="84.75" y="309.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.enemy.enemyTemplate" target="java.lang">
+      <point x="144.66666666666697" y="-145.5" />
+      <point x="5081.358135263948" y="1265.5078125" />
+      <point x="5016.453894715727" y="1265.5078125" />
+      <point x="5016.453894715727" y="385.5078125" />
+      <point x="4241.1907967032985" y="385.5078125" />
+      <point x="21.09090909090901" y="14.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.turret.turretActual" target="classes.render.mustBeRendered.Entity.baseEntity.Entity">
+      <point x="36.0" y="-166.5" />
+      <point x="2594.2288270714707" y="3424.5078125" />
+      <point x="2764.112874625376" y="3424.5078125" />
+      <point x="2764.112874625376" y="1984.5078125" />
+      <point x="2913.160605665478" y="1984.5078125" />
+      <point x="-110.5" y="254.5" />
+    </edge>
+    <edge source="main.ApexTurrets" target="java.lang">
+      <point x="0.0" y="-26.5" />
+      <point x="6243.274600406116" y="6161.5078125" />
+      <point x="6264.4412670727825" y="6161.5078125" />
+      <point x="6264.4412670727825" y="155.5078125" />
+      <point x="4275.840147352649" y="155.5078125" />
+      <point x="55.74025974025972" y="14.5" />
+    </edge>
+    <edge source="Gameplay.waves.waveManager" target="classes.render.mustBeRendered.Entity.enemy.enemyActual">
+      <point x="-113.42105263157919" y="-210.5" />
+      <point x="5359.71014950614" y="2713.5078125" />
+      <point x="3981.0828178759" y="2713.5078125" />
+      <point x="197.75" y="309.5" />
+    </edge>
+    <edge source="main.main" target="Gameplay.player.PlayerManager">
+      <point x="-179.090909090909" y="-487.5" />
+      <point x="4311.5705027568965" y="5131.5078125" />
+      <point x="210.9972620646322" y="5131.5078125" />
+      <point x="210.9972620646322" y="2004.5078125" />
+      <point x="171.9004863632581" y="2004.5078125" />
+      <point x="-181.66666666666652" y="232.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.turret.turretActual" target="classes.util.coordinate.Coordinate">
+      <point x="132.0" y="-166.5" />
+      <point x="2690.2288270714707" y="3464.5078125" />
+      <point x="3491.8328178759" y="3464.5078125" />
+      <point x="3491.8328178759" y="1265.5078125" />
+      <point x="3527.744588094861" y="1265.5078125" />
+      <point x="-45.71428571428578" y="199.5" />
+    </edge>
+    <edge source="Gameplay.turrets.TurretManager" target="Gameplay.player.PlayerManager">
+      <point x="-201.02499999999986" y="-200.5" />
+      <point x="1669.3663270714708" y="4530.5078125" />
+      <point x="232.9972620646322" y="4530.5078125" />
+      <point x="232.9972620646322" y="1994.5078125" />
+      <point x="293.01159747436895" y="1994.5078125" />
+      <point x="-60.55555555555566" y="232.5" />
+    </edge>
+    <edge source="classes.util.CfgReader.CfgReader" target="main.main">
+      <point x="106.39285714285688" y="156.5" />
+      <point x="5542.020583481053" y="1285.5078125" />
+      <point x="5710.131202137719" y="1285.5078125" />
+      <point x="5710.131202137719" y="5071.5078125" />
+      <point x="4598.115957302351" y="5071.5078125" />
+      <point x="107.45454545454504" y="-487.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.enemy.enemyActual" target="java.lang">
+      <point x="60.26666666666688" y="-309.5" />
+      <point x="3843.5994845425676" y="1934.5078125" />
+      <point x="4219.998668341312" y="1934.5078125" />
+      <point x="4219.998668341312" y="495.5078125" />
+      <point x="4224.61936813187" y="495.5078125" />
+      <point x="4.519480519480567" y="14.5" />
+    </edge>
+    <edge source="main.main" target="Gameplay.waves.waveManager">
+      <point x="71.63636363636397" y="-487.5" />
+      <point x="4562.297775484169" y="5041.5078125" />
+      <point x="5548.989922284649" y="5041.5078125" />
+      <point x="5548.989922284649" y="3524.5078125" />
+      <point x="5527.006202137719" y="3524.5078125" />
+      <point x="53.875" y="210.5" />
+    </edge>
+    <edge source="Gameplay.player.PlayerManager" target="classes.util.CustomActionListeners.BooleanChangeListener">
+      <point x="136.25" y="-232.5" />
+      <point x="489.75" y="115.5078125" />
+      <point x="535.5625" y="115.5078125" />
+      <point x="109.125" y="26.5" />
+    </edge>
+    <edge source="Gameplay.turrets.TurretFrame" target="classes.render.mustBeRendered.Entity.baseEntity.entityType">
+      <point x="0.0" y="-144.5" />
+      <point x="2001.2667207792222" y="4121.5078125" />
+      <point x="2035.4866515869246" y="4121.5078125" />
+      <point x="2035.4866515869246" y="1325.5078125" />
+      <point x="2029.7795412920425" y="1325.5078125" />
+      <point x="-39.333333333333485" y="48.5" />
+    </edge>
+    <edge source="Gameplay.turrets.TurretFrame" target="main.main">
+      <point x="330.75" y="144.5" />
+      <point x="2332.016720779222" y="4460.5078125" />
+      <point x="2117.3913270714706" y="4460.5078125" />
+      <point x="2117.3913270714706" y="5081.5078125" />
+      <point x="4371.2674724538665" y="5081.5078125" />
+      <point x="-119.39393939393904" y="-487.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.turret.bullet.bulletActual" target="classes.util.coordinate.Coordinate">
+      <point x="103.90909090909099" y="-134.5" />
+      <point x="3080.021965534467" y="2833.5078125" />
+      <point x="3480.8328178759" y="2833.5078125" />
+      <point x="3480.8328178759" y="1255.5078125" />
+      <point x="3516.316016666289" y="1255.5078125" />
+      <point x="-57.14285714285734" y="199.5" />
+    </edge>
+    <edge source="classes.util.CustomActionListeners.BooleanChangeListener" target="classes.util.CustomActionListeners.BooleanChangeEvent">
+      <point x="-36.375" y="26.5" />
+      <point x="390.0625" y="495.5078125" />
+      <point x="394.5" y="495.5078125" />
+      <point x="394.5" y="706.5078125" />
+      <point x="341.125" y="706.5078125" />
+      <point x="42.375" y="-47.5" />
+    </edge>
+    <edge source="Gameplay.turrets.TurretFrame" target="classes.render.mustBeRendered.Entity.turret.turretActual">
+      <point x="203.53846153846143" y="-144.5" />
+      <point x="2204.805182317684" y="4091.5078125" />
+      <point x="2414.2288270714707" y="4091.5078125" />
+      <point x="-144.0" y="166.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.enemy.enemyDictionary" target="classes.render.mustBeRendered.Entity.enemy.enemyTemplate">
+      <point x="-103.125" y="-68.5" />
+      <point x="5299.974363334123" y="2004.5078125" />
+      <point x="5045.191468597281" y="2004.5078125" />
+      <point x="108.5" y="145.5" />
+    </edge>
+    <edge source="Gameplay.turrets.TurretManager" target="classes.render.mustBeRendered.Entity.turret.turretDictionary">
+      <point x="-59.125" y="-200.5" />
+      <point x="1811.2663270714706" y="4470.5078125" />
+      <point x="672.8176618478037" y="4470.5078125" />
+      <point x="672.8176618478037" y="4121.5078125" />
+      <point x="747.9458333333337" y="4121.5078125" />
+      <point x="91.33333333333348" y="89.5" />
+    </edge>
+    <edge source="Gameplay.waves.waveManager" target="java.lang">
+      <point x="68.05263157894751" y="-210.5" />
+      <point x="5541.183833716666" y="2803.5078125" />
+      <point x="5762.119838501354" y="2803.5078125" />
+      <point x="5762.119838501354" y="305.5078125" />
+      <point x="4253.242744755246" y="305.5078125" />
+      <point x="33.14285714285688" y="14.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.turret.turretDictionary" target="classes.render.mustBeRendered.Entity.turret.turretTemplate">
+      <point x="17.125" y="-89.5" />
+      <point x="673.7375000000002" y="3474.5078125" />
+      <point x="739.4875000000002" y="3474.5078125" />
+      <point x="-147.0" y="210.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.turret.enemyFilter" target="classes.render.mustBeRendered.Entity.baseEntity.entityType">
+      <point x="-113.19999999999982" y="-80.5" />
+      <point x="2346.4128746253764" y="2813.5078125" />
+      <point x="2068.4866515869244" y="2813.5078125" />
+      <point x="0.0" y="48.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.square" target="classes.util.resources.ResourceManager">
+      <point x="-6.5" y="-14.5" />
+      <point x="4425.369368131869" y="1225.5078125" />
+      <point x="4151.832001674646" y="1225.5078125" />
+      <point x="93.33333333333348" y="112.5" />
+    </edge>
+    <edge source="classes.util.CustomActionListeners.BooleanChangeDispatcher" target="classes.util.CustomActionListeners.BooleanChangeListener">
+      <point x="0.0" y="-26.5" />
+      <point x="192.0" y="495.5078125" />
+      <point x="317.3125" y="495.5078125" />
+      <point x="-109.125" y="26.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.turret.bullet.bulletActual" target="classes.util.coordinate.dir">
+      <point x="34.63636363636351" y="-134.5" />
+      <point x="3010.7492382617393" y="2803.5078125" />
+      <point x="3386.749484542567" y="2803.5078125" />
+      <point x="3386.749484542567" y="706.5078125" />
+      <point x="3368.416151209234" y="706.5078125" />
+      <point x="-47.666666666666515" y="80.5" />
+    </edge>
+    <edge source="classes.render.mustRender.canvas" target="java.lang">
+      <point x="87.19999999999982" y="-243.5" />
+      <point x="4546.48521859728" y="3484.5078125" />
+      <point x="4709.191468597281" y="3484.5078125" />
+      <point x="4709.191468597281" y="415.5078125" />
+      <point x="4236.671316183818" y="415.5078125" />
+      <point x="16.57142857142844" y="14.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.square" target="java.lang">
+      <point x="32.5" y="-14.5" />
+      <point x="4464.369368131869" y="1325.5078125" />
+      <point x="4462.369368131869" y="1325.5078125" />
+      <point x="4462.369368131869" y="445.5078125" />
+      <point x="4232.151835664337" y="445.5078125" />
+      <point x="12.051948051947875" y="14.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.turret.enemyFilter" target="classes.util.coordinate.Coordinate">
+      <point x="113.19999999999982" y="-80.5" />
+      <point x="2572.812874625376" y="2813.5078125" />
+      <point x="3458.8328178759" y="2813.5078125" />
+      <point x="3458.8328178759" y="1235.5078125" />
+      <point x="3493.458873809147" y="1235.5078125" />
+      <point x="-80.0" y="199.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.baseEntity.entityType" target="java.lang">
+      <point x="0.0" y="-48.5" />
+      <point x="2069.112874625376" y="355.5078125" />
+      <point x="4203.528459040961" y="355.5078125" />
+      <point x="-16.57142857142844" y="14.5" />
+    </edge>
+    <edge source="Gameplay.waves.WaveParser" target="classes.util.CfgReader.CfgReader">
+      <point x="-141.60000000000036" y="-47.5" />
+      <point x="5888.06343829425" y="1265.5078125" />
+      <point x="5589.306297766768" y="1265.5078125" />
+      <point x="153.67857142857156" y="156.5" />
+    </edge>
+    <edge source="Gameplay.turrets.TurretManager" target="java.lang">
+      <point x="-153.7249999999999" y="-200.5" />
+      <point x="1716.6663270714707" y="4510.5078125" />
+      <point x="473.25" y="4510.5078125" />
+      <point x="473.25" y="2783.5078125" />
+      <point x="840.2343285144707" y="2783.5078125" />
+      <point x="840.2343285144707" y="155.5078125" />
+      <point x="4173.398588911091" y="155.5078125" />
+      <point x="-46.70129870129858" y="14.5" />
+    </edge>
+    <edge source="main.main" target="classes.render.mustBeRendered.Entity.baseEntity.Entity">
+      <point x="-83.57575757575796" y="-487.5" />
+      <point x="4407.085654272047" y="5051.5078125" />
+      <point x="3273.4866515869244" y="5051.5078125" />
+      <point x="3273.4866515869244" y="1994.5078125" />
+      <point x="3060.4939389988112" y="1994.5078125" />
+      <point x="36.83333333333303" y="254.5" />
+    </edge>
+    <edge source="Gameplay.waves.waveManager" target="Gameplay.waves.WaveParser">
+      <point x="204.15789473684276" y="-210.5" />
+      <point x="5677.289096874561" y="2863.5078125" />
+      <point x="6074.413082457809" y="2863.5078125" />
+      <point x="6074.413082457809" y="2014.5078125" />
+      <point x="5941.16343829425" y="2014.5078125" />
+      <point x="-88.5" y="47.5" />
+    </edge>
+    <edge source="classes.util.coordinate.dir" target="java.lang">
+      <point x="-35.75" y="-80.5" />
+      <point x="3380.3328178759" y="415.5078125" />
+      <point x="4212.567420079922" y="415.5078125" />
+      <point x="-7.532467532467308" y="14.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.turret.bullet.bulletActual" target="classes.render.mustBeRendered.Entity.baseEntity.entityType">
+      <point x="-69.27272727272702" y="-134.5" />
+      <point x="2906.840147352649" y="2773.5078125" />
+      <point x="2079.4866515869244" y="2773.5078125" />
+      <point x="2079.4866515869244" y="1325.5078125" />
+      <point x="2082.2239857364875" y="1325.5078125" />
+      <point x="13.111111111111313" y="48.5" />
+    </edge>
+    <edge source="classes.util.coordinate.Coordinate" target="java.lang">
+      <point x="30.0" y="-199.5" />
+      <point x="3603.458873809147" y="706.5078125" />
+      <point x="3596.612874625376" y="706.5078125" />
+      <point x="3596.612874625376" y="445.5078125" />
+      <point x="4217.086900599403" y="445.5078125" />
+      <point x="-3.0129870129867413" y="14.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.square" target="main.main">
+      <point x="44.6875" y="14.5" />
+      <point x="4476.556868131869" y="1954.5078125" />
+      <point x="4655.285218597281" y="1954.5078125" />
+      <point x="4655.285218597281" y="5011.5078125" />
+      <point x="4526.479593665987" y="5011.5078125" />
+      <point x="35.81818181818198" y="-487.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.square" target="classes.util.CfgReader.CfgReader">
+      <point x="45.5" y="-14.5" />
+      <point x="4477.369368131869" y="1275.5078125" />
+      <point x="5281.949154909625" y="1275.5078125" />
+      <point x="-153.67857142857156" y="156.5" />
+    </edge>
+    <edge source="main.main" target="classes.render.mustRender.canvas">
+      <point x="0.0" y="-487.5" />
+      <point x="4490.661411847805" y="4981.5078125" />
+      <point x="4519.285218597281" y="4981.5078125" />
+      <point x="4519.285218597281" y="4121.5078125" />
+      <point x="4568.285218597281" y="4121.5078125" />
+      <point x="109.0" y="243.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.square" target="classes.render.mustBeRendered.square">
+      <point x="-36.5625" y="14.5" />
+      <point x="4395.306868131869" y="1664.5078125" />
+      <point x="4316.869368131869" y="1664.5078125" />
+      <point x="4316.869368131869" y="1589.1328125" />
+      <point x="-65.0" y="-10.875" />
+    </edge>
+    <edge source="Gameplay.turrets.TurretFrame" target="classes.render.mustBeRendered.Entity.baseEntity.Entity">
+      <point x="135.69230769230762" y="-144.5" />
+      <point x="2136.9590284715296" y="4121.5078125" />
+      <point x="2102.112874625376" y="4121.5078125" />
+      <point x="2102.112874625376" y="1954.5078125" />
+      <point x="2839.4939389988112" y="1954.5078125" />
+      <point x="-184.16666666666652" y="254.5" />
+    </edge>
+    <edge source="Gameplay.waves.waveManager" target="main.main">
+      <point x="-53.875" y="210.5" />
+      <point x="5419.256202137719" y="3534.5078125" />
+      <point x="5537.989922284649" y="3534.5078125" />
+      <point x="5537.989922284649" y="5031.5078125" />
+      <point x="4550.358381544775" y="5031.5078125" />
+      <point x="59.69696969696997" y="-487.5" />
+    </edge>
+    <edge source="Gameplay.turrets.TurretFrame" target="classes.render.mustBeRendered.Entity.turret.turretTemplate">
+      <point x="-339.2307692307693" y="-144.5" />
+      <point x="1662.0359515484529" y="4101.5078125" />
+      <point x="901.9921530299243" y="4101.5078125" />
+      <point x="901.9921530299243" y="3484.5078125" />
+      <point x="935.4875000000002" y="3484.5078125" />
+      <point x="49.0" y="210.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.turret.turretActual" target="classes.render.mustBeRendered.Entity.turret.bullet.bulletActual">
+      <point x="84.0" y="-166.5" />
+      <point x="2642.2288270714707" y="3444.5078125" />
+      <point x="2849.112874625376" y="3444.5078125" />
+      <point x="-127.0" y="134.5" />
+    </edge>
+    <edge source="classes.render.mustRender.canvas" target="Gameplay.player.PlayerManager">
+      <point x="-152.60000000000036" y="-243.5" />
+      <point x="4306.68521859728" y="3384.5078125" />
+      <point x="1190.9875000000002" y="3384.5078125" />
+      <point x="1190.9875000000002" y="2763.5078125" />
+      <point x="718.2505088178796" y="2763.5078125" />
+      <point x="718.2505088178796" y="2014.5078125" />
+      <point x="474.67826414103547" y="2014.5078125" />
+      <point x="121.11111111111086" y="232.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.square" target="classes.util.coordinate.Coordinate">
+      <point x="-32.5" y="-14.5" />
+      <point x="4399.369368131869" y="1245.5078125" />
+      <point x="3676.316016666289" y="1245.5078125" />
+      <point x="102.85714285714266" y="199.5" />
+    </edge>
+    <edge source="main.main" target="Gameplay.turrets.TurretManager">
+      <point x="-143.27272727272702" y="-487.5" />
+      <point x="4347.3886845750785" y="5101.5078125" />
+      <point x="1870.3913270714706" y="5101.5078125" />
+      <point x="0.0" y="200.5" />
+    </edge>
+    <edge source="Gameplay.turrets.TurretManager" target="classes.render.mustBeRendered.square">
+      <point x="224.67499999999995" y="-200.5" />
+      <point x="2095.0663270714704" y="4540.5078125" />
+      <point x="4285.285218597281" y="4540.5078125" />
+      <point x="4285.285218597281" y="1984.5078125" />
+      <point x="4427.806868131869" y="1984.5078125" />
+      <point x="-4.0625" y="14.5" />
+    </edge>
+    <edge source="classes.util.resources.ResourceManager" target="java.lang">
+      <point x="-70.00000000000045" y="-112.5" />
+      <point x="3988.4986683413117" y="706.5078125" />
+      <point x="4067.1128746253758" y="706.5078125" />
+      <point x="4067.1128746253758" y="465.5078125" />
+      <point x="4220.0998876123895" y="465.5078125" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.enemy.enemyActual" target="Gameplay.player.PlayerManager">
+      <point x="-210.9333333333334" y="-309.5" />
+      <point x="3572.399484542567" y="1934.5078125" />
+      <point x="595.7893752521468" y="1934.5078125" />
+      <point x="242.22222222222217" y="232.5" />
+    </edge>
+    <edge source="Gameplay.waves.waveManager" target="classes.render.mustBeRendered.Entity.baseEntity.Entity">
+      <point x="-158.78947368420995" y="-210.5" />
+      <point x="5314.341728453509" y="2733.5078125" />
+      <point x="3328.4866515869244" y="2733.5078125" />
+      <point x="3328.4866515869244" y="1944.5078125" />
+      <point x="3183.2717167765886" y="1944.5078125" />
+      <point x="159.61111111111086" y="254.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.turret.turretDictionary" target="main.main">
+      <point x="-91.33333333333348" y="89.5" />
+      <point x="565.2791666666667" y="4121.5078125" />
+      <point x="647.1671754845456" y="4121.5078125" />
+      <point x="647.1671754845456" y="5121.5078125" />
+      <point x="4323.5098966962905" y="5121.5078125" />
+      <point x="-167.151515151515" y="-487.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.turret.enemyFilter" target="classes.render.mustBeRendered.Entity.enemy.enemyActual">
+      <point x="226.4000000000001" y="-80.5" />
+      <point x="2686.012874625376" y="2843.5078125" />
+      <point x="3585.5828178759" y="2843.5078125" />
+      <point x="-197.75" y="309.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.turret.bullet.bulletActual" target="main.main">
+      <point x="127.0" y="134.5" />
+      <point x="3103.112874625376" y="3454.5078125" />
+      <point x="3023.105050109922" y="3454.5078125" />
+      <point x="3023.105050109922" y="4071.5078125" />
+      <point x="3108.4788270714707" y="4071.5078125" />
+      <point x="3108.4788270714707" y="5061.5078125" />
+      <point x="4395.1462603326545" y="5061.5078125" />
+      <point x="-95.51515151515105" y="-487.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.enemy.enemyDictionary" target="classes.util.CfgReader.CfgReader">
+      <point x="20.625" y="-68.5" />
+      <point x="-11.821428571428442" y="156.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.turret.bullet.bulletActual" target="classes.render.mustBeRendered.Entity.baseEntity.Entity">
+      <point x="0.0" y="-134.5" />
+      <point x="2976.112874625376" y="2803.5078125" />
+      <point x="2964.294692807194" y="2803.5078125" />
+      <point x="2964.294692807194" y="2014.5078125" />
+      <point x="2986.8272723321443" y="2014.5078125" />
+      <point x="-36.833333333333485" y="254.5" />
+    </edge>
+    <edge source="Gameplay.turrets.TurretFrame" target="Gameplay.turrets.TurretManager">
+      <point x="110.25" y="144.5" />
+      <point x="2111.516720779222" y="4460.5078125" />
+      <point x="1905.8663270714706" y="4460.5078125" />
+      <point x="35.47499999999991" y="-200.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.enemy.enemyActual" target="classes.render.mustBeRendered.Entity.baseEntity.entityType">
+      <point x="-120.5333333333333" y="-309.5" />
+      <point x="3662.7994845425674" y="1904.5078125" />
+      <point x="3255.160605665478" y="1904.5078125" />
+      <point x="3255.160605665478" y="1145.5078125" />
+      <point x="2121.5573190698206" y="1145.5078125" />
+      <point x="52.44444444444434" y="48.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.enemy.enemyDictionary" target="main.main">
+      <point x="-110.0" y="68.5" />
+      <point x="5293.099363334123" y="2863.5078125" />
+      <point x="5247.131202137719" y="2863.5078125" />
+      <point x="5247.131202137719" y="5021.5078125" />
+      <point x="4538.418987605381" y="5021.5078125" />
+      <point x="47.75757575757598" y="-487.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.turret.turretActual" target="classes.render.mustBeRendered.Entity.baseEntity.entityType">
+      <point x="-36.0" y="-166.5" />
+      <point x="2522.2288270714707" y="3404.5078125" />
+      <point x="2046.4866515869246" y="3404.5078125" />
+      <point x="2046.4866515869246" y="1325.5078125" />
+      <point x="2042.8906524031538" y="1325.5078125" />
+      <point x="-26.22222222222217" y="48.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.turret.turretActual" target="main.main">
+      <point x="144.0" y="166.5" />
+      <point x="2702.2288270714707" y="4071.5078125" />
+      <point x="2993.9788270714707" y="4071.5078125" />
+      <point x="2993.9788270714707" y="5071.5078125" />
+      <point x="4383.2068663932605" y="5071.5078125" />
+      <point x="-107.45454545454504" y="-487.5" />
+    </edge>
+    <edge source="Gameplay.waves.WaveParser" target="Gameplay.waves.Wave">
+      <point x="-70.80000000000018" y="-47.5" />
+      <point x="5958.86343829425" y="1325.5078125" />
+      <point x="5983.713082457809" y="1325.5078125" />
+      <point x="5983.713082457809" y="706.5078125" />
+      <point x="5970.669838501354" y="706.5078125" />
+      <point x="0.0" y="47.5" />
+    </edge>
+    <edge source="classes.render.mustRender.canvas" target="Gameplay.waves.waveManager">
+      <point x="152.60000000000036" y="-243.5" />
+      <point x="4611.885218597281" y="3534.5078125" />
+      <point x="5311.506202137719" y="3534.5078125" />
+      <point x="-161.625" y="210.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.turret.turretActual" target="classes.render.mustBeRendered.Entity.turret.enemyFilter">
+      <point x="-12.0" y="-166.5" />
+      <point x="2546.2288270714707" y="3394.5078125" />
+      <point x="2459.612874625376" y="3394.5078125" />
+      <point x="0.0" y="80.5" />
+    </edge>
+    <edge source="Gameplay.turrets.TurretManager" target="classes.render.mustBeRendered.Entity.turret.turretActual">
+      <point x="59.125" y="-200.5" />
+      <point x="1929.5163270714706" y="4470.5078125" />
+      <point x="2584.2288270714707" y="4470.5078125" />
+      <point x="2584.2288270714707" y="4091.5078125" />
+      <point x="2510.2288270714707" y="4091.5078125" />
+      <point x="-48.0" y="166.5" />
+    </edge>
+    <edge source="Gameplay.waves.waveManager" target="classes.util.CfgReader.CfgReader">
+      <point x="45.368421052631675" y="-210.5" />
+      <point x="5518.499623190351" y="2793.5078125" />
+      <point x="5656.958083481053" y="2793.5078125" />
+      <point x="5656.958083481053" y="1305.5078125" />
+      <point x="5494.734869195339" y="1305.5078125" />
+      <point x="59.10714285714312" y="156.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.turret.turretTemplate" target="java.lang">
+      <point x="-196.0" y="-210.5" />
+      <point x="690.4875000000002" y="2843.5078125" />
+      <point x="1118.2361689910394" y="2843.5078125" />
+      <point x="1118.2361689910394" y="215.5078125" />
+      <point x="4182.437549950052" y="215.5078125" />
+      <point x="-37.66233766233745" y="14.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.baseEntity.Entity" target="classes.render.mustBeRendered.Entity.baseEntity.entityType">
+      <point x="-160.72727272727298" y="-254.5" />
+      <point x="2862.9333329382052" y="1315.5078125" />
+      <point x="2108.4462079587092" y="1315.5078125" />
+      <point x="39.333333333333485" y="48.5" />
+    </edge>
+    <edge source="classes.render.mustRender.canvas" target="classes.util.CfgReader.CfgReader">
+      <point x="130.80000000000018" y="-243.5" />
+      <point x="4590.085218597281" y="3524.5078125" />
+      <point x="5208.191468597281" y="3524.5078125" />
+      <point x="5208.191468597281" y="1325.5078125" />
+      <point x="5400.163440623911" y="1325.5078125" />
+      <point x="-35.464285714285325" y="156.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.turret.bullet.bulletActual" target="classes.render.mustBeRendered.Entity.enemy.enemyActual">
+      <point x="138.5454545454545" y="-134.5" />
+      <point x="3114.6583291708303" y="2853.5078125" />
+      <point x="3642.0828178759" y="2853.5078125" />
+      <point x="-141.25" y="309.5" />
+    </edge>
+    <edge source="classes.util.coordinate.Coordinate" target="classes.util.coordinate.dir">
+      <point x="-90.0" y="-199.5" />
+      <point x="3483.458873809147" y="706.5078125" />
+      <point x="3463.749484542567" y="706.5078125" />
+      <point x="47.666666666666515" y="80.5" />
+    </edge>
+    <edge source="Gameplay.waves.waveManager" target="classes.render.mustBeRendered.square">
+      <point x="-68.05263157894751" y="-210.5" />
+      <point x="5405.078570558771" y="2693.5078125" />
+      <point x="4674.410218597281" y="2693.5078125" />
+      <point x="4674.410218597281" y="1934.5078125" />
+      <point x="4492.806868131869" y="1934.5078125" />
+      <point x="60.9375" y="14.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.enemy.enemyActual" target="classes.render.mustBeRendered.Entity.baseEntity.Entity">
+      <point x="-150.66666666666652" y="-309.5" />
+      <point x="3632.666151209234" y="1914.5078125" />
+      <point x="3232.3828278877" y="1914.5078125" />
+      <point x="208.72222222222217" y="254.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.baseEntity.Entity" target="classes.util.resources.ResourceManager">
+      <point x="200.909090909091" y="-254.5" />
+      <point x="3224.569696574569" y="1325.5078125" />
+      <point x="3965.1653350079787" y="1325.5078125" />
+      <point x="-93.33333333333348" y="112.5" />
+    </edge>
+    <edge source="classes.util.coordinate.Coordinate" target="main.main">
+      <point x="57.14285714285688" y="199.5" />
+      <point x="3630.601730952004" y="1285.5078125" />
+      <point x="4019.8328178759" y="1285.5078125" />
+      <point x="4019.8328178759" y="5021.5078125" />
+      <point x="4442.903836090229" y="5021.5078125" />
+      <point x="-47.75757575757598" y="-487.5" />
+    </edge>
+    <edge source="Gameplay.player.PlayerManager" target="classes.util.CustomActionListeners.BooleanChangeDispatcher">
+      <point x="-227.08333333333348" y="-232.5" />
+      <point x="126.48381969659113" y="1325.5078125" />
+      <point x="118.75" y="1325.5078125" />
+      <point x="118.75" y="706.5078125" />
+      <point x="64.0" y="706.5078125" />
+      <point x="-128.0" y="26.5" />
+    </edge>
+    <edge source="classes.render.mustRender.canvas" target="classes.render.mustBeRendered.square">
+      <point x="0.0" y="-243.5" />
+      <point x="4459.285218597281" y="3484.5078125" />
+      <point x="4453.885218597281" y="3484.5078125" />
+      <point x="4453.885218597281" y="1994.5078125" />
+      <point x="4444.056868131869" y="1994.5078125" />
+      <point x="12.1875" y="14.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.enemy.enemyDictionary" target="java.lang">
+      <point x="-20.625" y="-68.5" />
+      <point x="5382.474363334123" y="1984.5078125" />
+      <point x="5164.191468597281" y="1984.5078125" />
+      <point x="5164.191468597281" y="375.5078125" />
+      <point x="4242.697290209792" y="375.5078125" />
+      <point x="22.597402597402834" y="14.5" />
+    </edge>
+    <edge source="Gameplay.waves.WaveParser" target="java.lang">
+      <point x="70.80000000000018" y="-47.5" />
+      <point x="6100.46343829425" y="1315.5078125" />
+      <point x="6170.046415791142" y="1315.5078125" />
+      <point x="6170.046415791142" y="225.5078125" />
+      <point x="4265.294692807195" y="225.5078125" />
+      <point x="45.19480519480567" y="14.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.turret.turretActual" target="java.lang">
+      <point x="-84.0" y="-166.5" />
+      <point x="2474.2288270714707" y="3424.5078125" />
+      <point x="1363.4523803026532" y="3424.5078125" />
+      <point x="1363.4523803026532" y="2843.5078125" />
+      <point x="1282.7537337662343" y="2843.5078125" />
+      <point x="1282.7537337662343" y="275.5078125" />
+      <point x="4191.476510989013" y="275.5078125" />
+      <point x="-28.623376623376316" y="14.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.turret.enemyFilter" target="classes.render.mustBeRendered.Entity.baseEntity.Entity">
+      <point x="0.0" y="-80.5" />
+      <point x="2459.612874625376" y="1964.5078125" />
+      <point x="2864.049494554367" y="1964.5078125" />
+      <point x="-159.6111111111113" y="254.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.enemy.enemyActual" target="classes.render.mustBeRendered.square">
+      <point x="150.66666666666652" y="-309.5" />
+      <point x="3933.999484542567" y="1964.5078125" />
+      <point x="4411.556868131869" y="1964.5078125" />
+      <point x="-20.3125" y="14.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.enemy.enemyActual" target="classes.render.mustBeRendered.Entity.enemy.enemyTemplate">
+      <point x="210.9333333333334" y="-309.5" />
+      <point x="3994.2661512092336" y="2014.5078125" />
+      <point x="4828.191468597281" y="2014.5078125" />
+      <point x="-108.5" y="145.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.turret.turretDictionary" target="java.lang">
+      <point x="-51.375" y="-89.5" />
+      <point x="605.2375000000002" y="3534.5078125" />
+      <point x="581.9875000000002" y="3534.5078125" />
+      <point x="581.9875000000002" y="2833.5078125" />
+      <point x="885.7408220209645" y="2833.5078125" />
+      <point x="885.7408220209645" y="205.5078125" />
+      <point x="4180.931056443558" y="205.5078125" />
+      <point x="-39.168831168831275" y="14.5" />
+    </edge>
+    <edge source="Gameplay.turrets.TurretFrame" target="Gameplay.player.PlayerManager">
+      <point x="-407.0769230769231" y="-144.5" />
+      <point x="1594.189797702299" y="4111.5078125" />
+      <point x="243.9972620646322" y="4111.5078125" />
+      <point x="243.9972620646322" y="2004.5078125" />
+      <point x="353.5671530299246" y="2004.5078125" />
+      <point x="0.0" y="232.5" />
+    </edge>
+    <edge source="Gameplay.turrets.TurretManager" target="classes.util.coordinate.Coordinate">
+      <point x="153.7249999999999" y="-200.5" />
+      <point x="2024.1163270714706" y="4510.5078125" />
+      <point x="3535.8328178759" y="4510.5078125" />
+      <point x="3535.8328178759" y="1305.5078125" />
+      <point x="3573.458873809147" y="1305.5078125" />
+      <point x="0.0" y="199.5" />
+    </edge>
+    <edge source="Gameplay.waves.waveManager" target="Gameplay.waves.Wave">
+      <point x="181.47368421052693" y="-210.5" />
+      <point x="5654.604886348246" y="2853.5078125" />
+      <point x="5836.453171834688" y="2853.5078125" />
+      <point x="5836.453171834688" y="706.5078125" />
+      <point x="5880.003171834687" y="706.5078125" />
+      <point x="-90.66666666666697" y="47.5" />
+    </edge>
+    <edge source="Gameplay.waves.waveManager" target="classes.render.mustBeRendered.Entity.enemy.enemyTemplate">
+      <point x="-45.368421052631675" y="-210.5" />
+      <point x="5427.762781085087" y="2683.5078125" />
+      <point x="4900.524801930614" y="2683.5078125" />
+      <point x="-36.16666666666697" y="145.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.baseEntity.Entity" target="java.lang">
+      <point x="-40.18181818181802" y="-254.5" />
+      <point x="2983.47878748366" y="1175.5078125" />
+      <point x="3142.431056443558" y="1175.5078125" />
+      <point x="3142.431056443558" y="385.5078125" />
+      <point x="4208.047939560442" y="385.5078125" />
+      <point x="-12.051948051947875" y="14.5" />
+    </edge>
+    <edge source="classes.render.mustBeRendered.Entity.turret.turretActual" target="classes.render.mustBeRendered.Entity.enemy.enemyActual">
+      <point x="180.0" y="-166.5" />
+      <point x="2738.2288270714707" y="3484.5078125" />
+      <point x="3777.8328178759" y="3484.5078125" />
+      <point x="3777.8328178759" y="2863.5078125" />
+      <point x="3755.0828178759" y="2863.5078125" />
+      <point x="-28.25" y="309.5" />
+    </edge>
+    <edge source="Gameplay.turrets.TurretManager" target="main.main">
+      <point x="157.66666666666652" y="200.5" />
+      <point x="2028.0579937381372" y="5091.5078125" />
+      <point x="4359.3280785144725" y="5091.5078125" />
+      <point x="-131.33333333333303" y="-487.5" />
+    </edge>
+    <edge source="main.main" target="classes.render.mustBeRendered.square">
+      <point x="23.87878787878799" y="-487.5" />
+      <point x="4514.540199726593" y="5001.5078125" />
+      <point x="4644.285218597281" y="5001.5078125" />
+      <point x="4644.285218597281" y="1964.5078125" />
+      <point x="4468.431868131869" y="1964.5078125" />
+      <point x="36.5625" y="14.5" />
+    </edge>
+    <edge source="Gameplay.turrets.TurretManager" target="classes.render.mustBeRendered.Entity.baseEntity.entityType">
+      <point x="-35.47499999999991" y="-200.5" />
+      <point x="1834.9163270714707" y="4460.5078125" />
+      <point x="1549.7667207792222" y="4460.5078125" />
+      <point x="1549.7667207792222" y="1325.5078125" />
+      <point x="2016.6684301809316" y="1325.5078125" />
+      <point x="-52.44444444444434" y="48.5" />
+    </edge>
+    <edge source="Gameplay.turrets.TurretManager" target="Gameplay.turrets.TurretFrame">
+      <point x="-11.825000000000045" y="-200.5" />
+      <point x="1858.5663270714706" y="4450.5078125" />
+      <point x="1670.5167207792222" y="4450.5078125" />
+      <point x="-330.75" y="144.5" />
+    </edge>
+    <edge source="Gameplay.waves.WaveParser" target="main.main">
+      <point x="88.5" y="47.5" />
+      <point x="6118.16343829425" y="2014.5078125" />
+      <point x="6085.413082457809" y="2014.5078125" />
+      <point x="6085.413082457809" y="5091.5078125" />
+      <point x="4621.994745181139" y="5091.5078125" />
+      <point x="131.33333333333303" y="-487.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.9167484193021754" x="3735.9529146812365" y="205.2526381852797" />
+  <SelectedNodes>
+    <node>java.lang</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
