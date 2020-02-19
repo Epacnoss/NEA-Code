@@ -8,6 +8,11 @@
   <component name="ChangeListManager">
     <list default="true" id="adafda04-aca3-4402-bcfb-4f1651a3f54a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NEA/META-INF/NEA.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NEA/classes/render/mustBeRendered/Entity/baseEntity/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NEA/classes/render/mustBeRendered/Entity/baseEntity/Entity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NEA/classes/render/mustBeRendered/Entity/turret/turretActual.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NEA/classes/render/mustBeRendered/Entity/turret/turretActual.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NEA/main/main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NEA/main/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NEA/main/main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/turret/turretActual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/turret/turretActual.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,39 +92,13 @@
       <command value="ls" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.main">
+  <component name="RunManager" selected="Application.ApexTurrets">
     <configuration name="ApexTurrets" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.ApexTurrets" />
       <module name="NEA" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CfgReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="classes.util.CfgReader.CfgReader" />
-      <module name="NEA" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="classes.util.CfgReader.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Coordinate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="classes.util.coordinate.Coordinate" />
-      <module name="NEA" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="classes.util.coordinate.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -140,12 +119,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.ApexTurrets" />
+      <item itemvalue="Application.main" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.main" />
         <item itemvalue="Application.ApexTurrets" />
-        <item itemvalue="Application.Coordinate" />
-        <item itemvalue="Application.CfgReader" />
+        <item itemvalue="Application.main" />
       </list>
     </recent_temporary>
   </component>
@@ -181,7 +162,7 @@
       <workItem from="1581864598232" duration="2813000" />
       <workItem from="1581931192277" duration="16626000" />
       <workItem from="1582016413613" duration="20790000" />
-      <workItem from="1582105270229" duration="1949000" />
+      <workItem from="1582105270229" duration="2736000" />
     </task>
     <task id="LOCAL-00001" summary="change vcs.xml and workspace.xml, to allow for commits inside IntelliJ">
       <created>1582106040143</created>
@@ -274,10 +255,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="271" y="246" key="#com.intellij.debugger.ui.breakpoints.EditClassFiltersDialog/0.0.1366.768@0.0.1366.768" timestamp="1581953858371" />
-    <state x="147" y="46" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582037418702">
+    <state x="147" y="46" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582109420916">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="147" y="46" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1582037418702" />
+    <state x="147" y="46" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1582109420916" />
     <state x="470" y="249" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581242010240">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -330,48 +311,48 @@
     </state>
     <state x="677" y="200" width="474" height="560" key="#xdebugger.evaluate/0.0.1366.768@0.0.1366.768" timestamp="1582046721373" />
     <state x="878" y="206" key="#xdebugger.evaluate/0.0.1920.1080@0.0.1920.1080" timestamp="1581358982048" />
-    <state x="328" y="23" width="787" height="745" key="CommitChangelistDialog2" timestamp="1582107633646">
+    <state x="328" y="23" width="787" height="745" key="CommitChangelistDialog2" timestamp="1582109609945">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="328" y="23" width="787" height="745" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1582107633646" />
+    <state x="328" y="23" width="787" height="745" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1582109609945" />
     <state x="429" y="0" key="Diagram.Print.Preview.Dialog" timestamp="1581946094225">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="429" y="0" key="Diagram.Print.Preview.Dialog/0.0.1366.768@0.0.1366.768" timestamp="1581946094225" />
-    <state width="1324" height="250" key="GridCell.Tab.0.bottom" timestamp="1582048886175">
+    <state width="1324" height="202" key="GridCell.Tab.0.bottom" timestamp="1582109442386">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1324" height="250" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1582048886175" />
+    <state width="1324" height="202" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1582109442386" />
     <state width="1878" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1581404441278" />
     <state width="1324" height="202" key="GridCell.Tab.0.bottom/0.23.1366.745@0.23.1366.745" timestamp="1581940438080" />
     <state width="1878" height="375" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1580760615874" />
     <state width="1878" height="235" key="GridCell.Tab.0.bottom/0.23.1920.994@0.23.1920.994" timestamp="1580661750294" />
     <state width="1878" height="235" key="GridCell.Tab.0.bottom/0.23.1920.996@0.23.1920.996" timestamp="1580659142609" />
     <state width="1878" height="184" key="GridCell.Tab.0.bottom/0.23.1920.997@0.23.1920.997" timestamp="1580643390999" />
-    <state width="1324" height="250" key="GridCell.Tab.0.center" timestamp="1582048886173">
+    <state width="1324" height="202" key="GridCell.Tab.0.center" timestamp="1582109442384">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1324" height="250" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1582048886173" />
+    <state width="1324" height="202" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1582109442384" />
     <state width="1878" height="375" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1581404441277" />
     <state width="1324" height="202" key="GridCell.Tab.0.center/0.23.1366.745@0.23.1366.745" timestamp="1581940438067" />
     <state width="1878" height="375" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1580760615872" />
     <state width="1878" height="235" key="GridCell.Tab.0.center/0.23.1920.994@0.23.1920.994" timestamp="1580661750292" />
     <state width="1878" height="235" key="GridCell.Tab.0.center/0.23.1920.996@0.23.1920.996" timestamp="1580659142606" />
     <state width="1878" height="184" key="GridCell.Tab.0.center/0.23.1920.997@0.23.1920.997" timestamp="1580643390998" />
-    <state width="1324" height="250" key="GridCell.Tab.0.left" timestamp="1582048886172">
+    <state width="1324" height="202" key="GridCell.Tab.0.left" timestamp="1582109442382">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1324" height="250" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1582048886172" />
+    <state width="1324" height="202" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1582109442382" />
     <state width="1878" height="375" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1581404441276" />
     <state width="1324" height="202" key="GridCell.Tab.0.left/0.23.1366.745@0.23.1366.745" timestamp="1581940438058" />
     <state width="1878" height="375" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1580760615871" />
     <state width="1878" height="235" key="GridCell.Tab.0.left/0.23.1920.994@0.23.1920.994" timestamp="1580661750292" />
     <state width="1878" height="235" key="GridCell.Tab.0.left/0.23.1920.996@0.23.1920.996" timestamp="1580659142601" />
     <state width="1878" height="184" key="GridCell.Tab.0.left/0.23.1920.997@0.23.1920.997" timestamp="1580643390996" />
-    <state width="1324" height="250" key="GridCell.Tab.0.right" timestamp="1582048886174">
+    <state width="1324" height="202" key="GridCell.Tab.0.right" timestamp="1582109442385">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1324" height="250" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1582048886174" />
+    <state width="1324" height="202" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1582109442385" />
     <state width="1878" height="375" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1581404441278" />
     <state width="1324" height="202" key="GridCell.Tab.0.right/0.23.1366.745@0.23.1366.745" timestamp="1581940438069" />
     <state width="1878" height="375" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1580760615873" />
