@@ -148,8 +148,9 @@ public class main {
         System.out.println("TM DONE: " + new Timestamp(System.currentTimeMillis()));
 
         window.pack(); //pack window
-        window.setVisible(true); //set visible
         window.setPreferredSize(Toolkit.getDefaultToolkit().getScreenSize()); //set size - full screen size
+        window.setVisible(true); //set visible
+
         System.out.println("WINDOW DONE: " + new Timestamp(System.currentTimeMillis()));
         //endregion
 

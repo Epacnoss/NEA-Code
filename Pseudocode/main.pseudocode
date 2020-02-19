@@ -23,8 +23,8 @@ BEGIN lvl1 ()
 
     tm <- NEW TurretManager(sqc, pm, window)
     window.pack();
-    window.setVisible(TRUE)
     window.setPreferredSize(Toolkit.getDefaultToolkit().getScreenSize())
+        window.setVisible(TRUE)
 
     runThread <- NEW Thread (() -> {
         current = System.currentTimeMillis()
