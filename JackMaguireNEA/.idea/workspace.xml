@@ -180,7 +180,7 @@
       <workItem from="1581864598232" duration="2813000" />
       <workItem from="1581931192277" duration="16626000" />
       <workItem from="1582016413613" duration="20790000" />
-      <workItem from="1582105270229" duration="1473000" />
+      <workItem from="1582105270229" duration="1620000" />
     </task>
     <task id="LOCAL-00001" summary="change vcs.xml and workspace.xml, to allow for commits inside IntelliJ">
       <created>1582106040143</created>
@@ -203,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582106639463</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add .gitignore to stop all of the workspace.xml updates.">
+      <created>1582107634004</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1582107634004</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,7 +237,8 @@
     <MESSAGE value="change vcs.xml and workspace.xml, to allow for commits inside IntelliJ" />
     <MESSAGE value="update workspace.xml.&#10;&#10;change the setXYInArr and setXYInTile methods in Entity to be protected rather than public" />
     <MESSAGE value="update workspace.xml.&#10;&#10;make the isDone method abstract to show that I can use abstract methods - and then implement that in the turret class." />
-    <option name="LAST_COMMIT_MESSAGE" value="update workspace.xml.&#10;&#10;make the isDone method abstract to show that I can use abstract methods - and then implement that in the turret class." />
+    <MESSAGE value="add .gitignore to stop all of the workspace.xml updates." />
+    <option name="LAST_COMMIT_MESSAGE" value="add .gitignore to stop all of the workspace.xml updates." />
   </component>
   <component name="WindowStateProjectService">
     <state x="283" y="49" key="#Code_Folding" timestamp="1581847088674">
@@ -321,10 +329,10 @@
     </state>
     <state x="677" y="200" width="474" height="560" key="#xdebugger.evaluate/0.0.1366.768@0.0.1366.768" timestamp="1582046721373" />
     <state x="878" y="206" key="#xdebugger.evaluate/0.0.1920.1080@0.0.1920.1080" timestamp="1581358982048" />
-    <state x="328" y="23" width="787" height="745" key="CommitChangelistDialog2" timestamp="1582106638958">
+    <state x="328" y="23" width="787" height="745" key="CommitChangelistDialog2" timestamp="1582107633646">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="328" y="23" width="787" height="745" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1582106638958" />
+    <state x="328" y="23" width="787" height="745" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1582107633646" />
     <state x="429" y="0" key="Diagram.Print.Preview.Dialog" timestamp="1581946094225">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
