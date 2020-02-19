@@ -45,7 +45,7 @@ public class enemyActual extends Entity { //enemy class
         IN_TILE_TARGET = targetInTileTemporaryVariable;
     }
 
-    public enemyActual(enemyTemplate eTemplate, squareCollection squares, int code, PlayerManager pm) {
+    public enemyActual(enemyTemplate eTemplate, squareCollection squares, PlayerManager pm) {
         super(squares.getStart(), eTemplate.getFn(), entityType.enemy, IN_TILE_TARGET); // super all important variables
 
         template = eTemplate; //set variables

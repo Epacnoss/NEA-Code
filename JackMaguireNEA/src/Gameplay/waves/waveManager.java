@@ -13,7 +13,6 @@ import javax.swing.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
-import java.util.function.Predicate;
 
 public class waveManager { //class for spawning in enemies
 
@@ -53,7 +52,7 @@ public class waveManager { //class for spawning in enemies
         waiterThread.start();
 
         CfgReader reader = new CfgReader(main.WAVES_LOC + fnOfWave); //create cfgReader for the wave config file
-        ArrayList<Wave> waves = WaveParser.enemiesBetweenGaps(reader); //use the waveParser to get the waves
+        ArrayList<Wave> waves = WaveParser.getAllWaves(reader); //use the waveParser to get the waves
         enemyActuals = new ArrayList<>(); //init enemies
 
         enemiesSpawned = 0; //init enemiesSpawned and totEnemies
@@ -121,11 +120,9 @@ public class waveManager { //class for spawning in enemies
             }
 
             checkThread.start(); // start the checker thread
-            int co = 0; //code - to tell enemy if they are the first
             for (ArrayList<Character> thisWave : wavesInBetterForm) { //for each wave
                 try {
                     TimeUnit.MILLISECONDS.sleep(waveDist); //sleep for the wave gap
-
                 } catch (InterruptedException e) {
                     System.out.println("Wave wait interrupted");
                 }
@@ -138,18 +135,17 @@ public class waveManager { //class for spawning in enemies
                     }
 
                     enemyTemplate eT = enemyDictionary.getEnemy(c); //get the template from the dictionary
-                    enemyActual eA = new enemyActual(eT, sqc.clone(), co, pm); //create the enemy
+                    enemyActual eA = new enemyActual(eT, sqc.clone(), pm); //create the enemy
 
 
                     System.out.println("Enemy Started");
 
                     enemyActuals.add(eA); //add to render list
-                    co++; //increment code
                     enemiesSpawned++; //increment number spawned
 
 
-                    if(pm.isDead()) //check for player death
-                        break;
+                    if(pm.isDead()) //check for player death - we would use .isDone, but here, it cannot be done, as either the enemy cannot yet be dead (excluding extreme circumstances), so the player cannot have yet won
+                        return;
 
                 }
 

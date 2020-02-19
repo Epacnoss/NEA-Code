@@ -11,15 +11,13 @@ public class WaveParser {
     private WaveParser () { //private constructor to avoid instantiation
     }
 
-    public static ArrayList<Wave> enemiesBetweenGaps (CfgReader reader) //This method gives how many eneemies to give between each 1s gap given by the gamemanger
+    public static ArrayList<Wave> getAllWaves(CfgReader reader) //This method gives how many eneemies to give between each 1s gap given by the gamemanger
     {
         String noOfWavesStr = reader.get("enemyGaps", "wavesNo").toString();
-        int noOfWaves;
+        int noOfWaves = 0;
 
         if(main.INT_REGEX.matcher(noOfWavesStr).matches())
             noOfWaves = Integer.parseInt(noOfWavesStr);
-        else
-            noOfWaves = 0;
 
         ArrayList<String> wavesRaw = new ArrayList<>();
         for (int i = 1; i <= noOfWaves; i++) {
@@ -37,7 +35,7 @@ public class WaveParser {
 
             HashMap<Character, Integer> hashMap = new HashMap<>();
 
-            for (char c : chars) {
+            for (char c : chars) { // for each character
                 int current = 1; //Starting value is one if it doesn't contain it, or 1 + the before if it is new.
                 if(hashMap.containsKey(c)) {
                     current += hashMap.remove(c);

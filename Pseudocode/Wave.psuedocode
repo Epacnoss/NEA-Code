@@ -1,0 +1,81 @@
+BEGIN getAllWaves (reader)
+    noOfWavesStr <- reader.get("enemyGaps", "wavesNo").toString()
+    noOfWaves <- 0
+
+    BEGIN IF main.INT_REGEX.matcher(noOfWavesStr).matches()
+        noOfWaves <- Integer.parseInt(noOfWavesStr)
+    END IF
+
+    wavesRaw <- NEW ArrayList<String>()
+
+    BEGIN FOR i <- 1; i <= noOfWaves; i++
+        m <- "enemyGaps"
+        p <- "wave" + i
+
+        rawWave <- reader.get(m, p).toString()
+        wavesRaw.add(rawWave)
+    END FOR
+
+    enemiesBetweenFinal <- NEW ArrayList<Wave>()
+    BEGIN FOR enemies : wavesRaw
+        chars <- enemies.toCharArray()
+
+        hashMap <- NEW hashMap<Character, Integer>()
+
+        BEGIN FOR c : chars
+            current <- 1
+            BEGIN IF hashMap.containsKey(c)
+                current += hashMap.remove(c)
+            END IF
+
+            hashMap.put(c, current)
+        END FOR
+
+        w <- NEW Wave(hashMap)
+        enemiesBetweenFinal.add(w)
+    END FOR
+
+    RETURN enemiesBetweenFinal
+END getAllWaves
+
+checkThread <- new Thread(() -> {
+    PRINT "Running"
+
+    BEGIN WHILE !startWaitDone
+        BEGIN TRY
+            TimeUnit.MILLISECONDS.sleep(200)
+        END TRY
+        BEGIN CATCH e
+            PRINT "Enemy start wait sleeper interrupted"
+        END CATCH
+    END WHILE
+
+    checkThread.start()
+    BEGIN FOR thisWave : wavesInBetterForm
+        BEGIN TRY
+            TimeUnit.MILLISECONDS.sleep(waveDist);
+        END TRY
+        BEGIN CATCH e
+            PRINT "WAVE WAIT INTERRUPTED"
+        END CATCH
+
+        BEGIN FOR c : thisWave
+            BEGIN TRY
+                TimeUnit.MILLISECONDS.sleep(enemyDist);
+            END TRY
+            BEGIN CATCH e
+                PRINT "WAVE WAIT INTERRUPTED"
+            END CATCH
+
+            eT <- enemyDictionary.get(c)
+            eA <- NEW enemyActual(eT, sqc.clone(), pm)
+
+            enemyActuals.add(eA)
+            enemiesSpawned++
+
+            BEGIN IF pm.isDead()
+                RETURN
+            END IF
+        END FOR
+    END FOR
+})
