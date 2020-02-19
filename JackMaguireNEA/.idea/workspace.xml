@@ -6,7 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="adafda04-aca3-4402-bcfb-4f1651a3f54a" name="Default Changelist" comment="" />
+    <list default="true" id="adafda04-aca3-4402-bcfb-4f1651a3f54a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/baseEntity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/baseEntity/Entity.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,7 +65,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -178,6 +181,7 @@
       <workItem from="1581864598232" duration="2813000" />
       <workItem from="1581931192277" duration="16626000" />
       <workItem from="1582016413613" duration="20790000" />
+      <workItem from="1582105270229" duration="550000" />
     </task>
     <servers />
   </component>
@@ -196,6 +200,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../.." />
+    </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
     <state x="283" y="49" key="#Code_Folding" timestamp="1581847088674">
@@ -394,10 +403,10 @@
     <state width="1878" height="375" key="GridCell.Tab.1.right/0.23.1920.1057@0.23.1920.1057" timestamp="1581355961005" />
     <state width="1878" height="375" key="GridCell.Tab.1.right/0.23.1920.995@0.23.1920.995" timestamp="1578846322812" />
     <state width="1878" height="375" key="GridCell.Tab.1.right/0.23.1920.997@0.23.1920.997" timestamp="1580663610740" />
-    <state x="192" y="23" width="1024" height="745" key="SettingsEditor" timestamp="1582030731830">
+    <state x="192" y="23" width="1024" height="745" key="SettingsEditor" timestamp="1582106001100">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="192" y="23" width="1024" height="745" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1582030731830" />
+    <state x="192" y="23" width="1024" height="745" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1582106001100" />
     <state x="270" y="32" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1581355573291" />
     <state x="192" y="45" key="SettingsEditor/0.23.1366.745@0.23.1366.745" timestamp="1581769669837" />
     <state width="500" height="445" key="SwitcherDM" timestamp="1580565717844">
