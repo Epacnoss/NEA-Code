@@ -194,11 +194,11 @@ public abstract class Entity implements Comparable<Entity> { //Entity class - ea
                 .toString();
     }
 
-    public void setXYInTile(Coordinate XYInTile) { //set xyInArr and xyInTile
+    protected void setXYInTile(Coordinate XYInTile) { //set xyInArr and xyInTile
         this.XYInTile = XYInTile;
     }
 
-    public void setXYInArr(Coordinate XYInArr) {
+    protected void setXYInArr(Coordinate XYInArr) {
         this.XYInArr = XYInArr;
     }
 
