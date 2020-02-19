@@ -63,12 +63,26 @@ public class PlayerManager implements BooleanChangeDispatcher { //PlayerManager 
         hearts -= amnt;
         dispatchEvent(); //dispatchevent call
     }
+    public void donateH (int amnt) {
+        hearts += amnt;
+        dispatchEvent();
+    }
+    public void resetH () {
+        if(hearts == startHearts)
+            return;
+
+        hearts = startHearts;
+        dispatchEvent();
+    }
 
 
     public boolean isDead () { //am i dead yet
         return hearts <= 0;
     }
     public void hasWon () { //I have won!! - called by WaveManager when all enemies are dead
+        if(isDead())
+            return;
+
         hasWon = true;
         dispatchEvent();
     }
