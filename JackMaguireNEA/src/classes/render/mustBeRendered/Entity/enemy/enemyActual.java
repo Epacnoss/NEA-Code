@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 public class enemyActual extends Entity { //enemy class
 
     private static final Color AURA_COLOUR = new Color(50, 163, 200);
-    private static final Coordinate IN_TILE_TARGET = addHitBoxTolerances(Entity.turnFromArrToScrnPlusHalfTile(new Coordinate(0, 0)), new Coordinate(main.ENEMY_WIDTH / 2, main.ENEMY_HEIGHT / 2)); //static final variable for target
+    private static final Coordinate IN_TILE_TARGET; //static final variable for target
 
     public static final long MOVE_GAP = 20; //MS - same as bullet
 
@@ -38,6 +38,12 @@ public class enemyActual extends Entity { //enemy class
     private boolean hasBeenSpawned; //have i been spawned yet
 
     private boolean auraOn;
+
+    static {
+        Coordinate targetInTileTemporaryVariable = Entity.turnFromArrToScrnPlusHalfTile(Coordinate.ZERO, new Coordinate(main.ENEMY_WIDTH / 2, main.ENEMY_HEIGHT / 2));
+        targetInTileTemporaryVariable = addHitBoxTolerances(targetInTileTemporaryVariable, new Coordinate(main.ENEMY_WIDTH, main.ENEMY_HEIGHT));
+        IN_TILE_TARGET = targetInTileTemporaryVariable;
+    }
 
     public enemyActual(enemyTemplate eTemplate, squareCollection squares, int code, PlayerManager pm) {
         super(squares.getStart(), eTemplate.getFn(), entityType.enemy, IN_TILE_TARGET); // super all important variables
@@ -72,16 +78,12 @@ public class enemyActual extends Entity { //enemy class
 
             long current = System.currentTimeMillis(); //the current time in ms
 
-            hasBeenSpawned = true; //we have been spawned
-
             if(pm.isDone()) //again - if the playermanager is done - stop
                 return;
 
-            main.SOUNDS.get("Spawn.wav").start(); //play the spawn sound
-
 
             while(!isDone() && !pm.isDone()) { //while we aren't done and neither is the player
-                if (currentStep == squares.getEnemyPath().size()) //if we have reached the final step
+                if (currentStep >= squares.getEnemyPath().size()) //if we have reached the final step
                 {
                     hasHit = true; //we have hit
                     System.out.println("Ah-Ha! It appeareth that Tybalteth hath won this round, and Romeo hath beeneth 'pwned'");
@@ -111,7 +113,7 @@ public class enemyActual extends Entity { //enemy class
                 }
                 //endregion
 
-                currentCoord = squares.getEnemyPath().get(currentStep); //get the currentCoordinate
+                currentCoord = squares.getEnemyPath().get(currentStep).clone(); //get the currentCoordinate
                 Coordinate onScrnTarget = Entity.turnFromArrToScrnPlusHalfTile(currentCoord); //get the onscreen (in pixels) target
                 onScrnTarget = Entity.addHitBoxTolerances(onScrnTarget, CENTRE_OF_HITBOX); //add tolerance for hitbox
 
@@ -121,8 +123,8 @@ public class enemyActual extends Entity { //enemy class
 
                 if (distInPx >= dist) { //If the dist we can go is greater than the dist to go, then we know we can get there
                     setXYInArr(currentCoord); //set the XYInArr coordinate to be right - so we can move to the next step
+                    setXYInTile(IN_TILE_TARGET); //move to correct place in tileI
                     currentStep++; //increment step
-                    setXYInTile(IN_TILE_TARGET); //move to correct place
                     continue;
                 }
 
@@ -140,6 +142,9 @@ public class enemyActual extends Entity { //enemy class
         };
         runThread = new Thread(r); //create runthread
         runThread.start(); //start runThread
+
+        hasBeenSpawned = true; //we have been spawned
+        main.SOUNDS.get("Spawn.wav").start(); //play the spawn sound
     }
 
     public void aura () {

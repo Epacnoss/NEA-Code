@@ -1,0 +1,68 @@
+runThread <- NEW Thread (() -> {
+    BEGIN IF pm.isDone()
+        RETURN
+    END IF
+
+    current <- System.CurrentTimeMillis
+    hasBeenSpawned <- TRUE
+
+    main.SOUNDS.get("spawn.wav").start()
+
+    BEGIN WHILE !isDone() AND !pm.isDone()
+
+        BEGIN IF currentStep == squares.getEnemyPath().size()
+            hasHit <- TRUE
+            RETURN
+        END IF
+        BEGIN IF currentHP <= 0
+            isDead <- TRUE
+            RETURN
+        END IF
+
+        diff <- System.CurrentTimeMillis() - current
+        current <- System.CurrentTimeMillis()
+
+        BEGIN IF diff < 0
+            diff <- 0
+        END IF
+        BEGIN IF diff > MOVE_GAP
+            diff <- MOVE_GAP
+        END IF
+
+        BEGIN TRY
+            TimeUnit.MILLISECONDS.sleep(MOVE_GAP - diff)
+        END TRY
+        BEGIN CATCH e
+            PRINT "Enemy move gap changed"
+        END CATCH
+
+        currentCoord <- squares.getEnemyPath().get(currentStep)
+        onScrnTarget <- Entity.turnFromArrToScrnPlusHalfTile(currentCoord)
+        onScrnTarget <- Entity.addHitBoxTolerances(onScrnTarget, CENTRE_OF_HITBOX)
+
+        direction = getXYOnScrn().directionTo(onScrnTarget)
+        dist = getXYOnScrn().distTo(onScrnTarget)
+
+        BEGIN IF distInPx >= dist
+            setXYInArr(currentCoord)
+            setXYInTile(IN_TILE_TARGET)
+            currentStep++
+            CONTINUE
+        END IF
+
+        BEGIN SWITCH direction
+            BEGIN CASE N
+                changeY(-distInPx)
+            END CASE
+            BEGIN CASE S
+                changeY(distInPx)
+            END CASE
+            BEGIN CASE E
+                changeX(distInPx)
+            END CASE
+            BEGIN CASE W
+                changeX(-distInPx)
+            END CASE
+        END SWITCH    
+    END WHILE
+})
