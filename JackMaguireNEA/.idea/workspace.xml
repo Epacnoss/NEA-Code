@@ -9,6 +9,7 @@
     <list default="true" id="adafda04-aca3-4402-bcfb-4f1651a3f54a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/baseEntity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/baseEntity/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/turret/turretActual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/turret/turretActual.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,8 +182,23 @@
       <workItem from="1581864598232" duration="2813000" />
       <workItem from="1581931192277" duration="16626000" />
       <workItem from="1582016413613" duration="20790000" />
-      <workItem from="1582105270229" duration="550000" />
+      <workItem from="1582105270229" duration="886000" />
     </task>
+    <task id="LOCAL-00001" summary="change vcs.xml and workspace.xml, to allow for commits inside IntelliJ">
+      <created>1582106040143</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1582106040143</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update workspace.xml.&#10;&#10;change the setXYInArr and setXYInTile methods in Entity to be protected rather than public">
+      <created>1582106080335</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1582106080335</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,9 +218,13 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <ignored-roots>
       <path value="$PROJECT_DIR$/../.." />
     </ignored-roots>
+    <MESSAGE value="change vcs.xml and workspace.xml, to allow for commits inside IntelliJ" />
+    <MESSAGE value="update workspace.xml.&#10;&#10;change the setXYInArr and setXYInTile methods in Entity to be protected rather than public" />
+    <option name="LAST_COMMIT_MESSAGE" value="update workspace.xml.&#10;&#10;change the setXYInArr and setXYInTile methods in Entity to be protected rather than public" />
   </component>
   <component name="WindowStateProjectService">
     <state x="283" y="49" key="#Code_Folding" timestamp="1581847088674">
@@ -248,10 +268,10 @@
     </state>
     <state x="470" y="249" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1581242010240" />
     <state x="661" y="350" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1581186132067" />
-    <state x="496" y="107" key="#com.intellij.ide.util.MemberChooser" timestamp="1582048660931">
+    <state x="496" y="107" key="#com.intellij.ide.util.MemberChooser" timestamp="1582106574152">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="496" y="107" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1582048660931" />
+    <state x="496" y="107" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1582106574152" />
     <state x="697" y="150" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1581360512095" />
     <state x="442" y="175" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1581955126295">
       <screen x="0" y="0" width="1366" height="768" />
@@ -295,10 +315,10 @@
     </state>
     <state x="677" y="200" width="474" height="560" key="#xdebugger.evaluate/0.0.1366.768@0.0.1366.768" timestamp="1582046721373" />
     <state x="878" y="206" key="#xdebugger.evaluate/0.0.1920.1080@0.0.1920.1080" timestamp="1581358982048" />
-    <state x="328" y="23" width="787" height="745" key="CommitChangelistDialog2" timestamp="1582106039238">
+    <state x="328" y="23" width="787" height="745" key="CommitChangelistDialog2" timestamp="1582106079848">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="328" y="23" width="787" height="745" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1582106039238" />
+    <state x="328" y="23" width="787" height="745" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1582106079848" />
     <state x="429" y="0" key="Diagram.Print.Preview.Dialog" timestamp="1581946094225">
       <screen x="0" y="0" width="1366" height="768" />
     </state>

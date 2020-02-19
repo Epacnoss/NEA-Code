@@ -235,7 +235,5 @@ public abstract class Entity implements Comparable<Entity> { //Entity class - ea
         return onScrn;
     }
 
-    public boolean isDone () { //default - turret will return false always - so make it so it doesn't have to override anything. Just override for the other two.
-        return false;
-    }
+    public abstract boolean isDone ();
 }

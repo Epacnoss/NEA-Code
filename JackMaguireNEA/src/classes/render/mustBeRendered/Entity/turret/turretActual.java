@@ -144,4 +144,9 @@ public class turretActual extends Entity { //turret class
 
         return joiner.toString();
     }
+
+    @Override
+    public boolean isDone() {
+        return false;
+    }
 }
