@@ -18,6 +18,7 @@ public class turretActual extends Entity { //turret class
     private ArrayList<Entity> shotsFired; //shots that have been fired
 
     private long differenceMs; //target firing difference
+    private boolean hasToWait;
 
     private ArrayList<Entity> entities; //enemies to hit
 
@@ -32,6 +33,7 @@ public class turretActual extends Entity { //turret class
 
 
         differenceMs = ((long) Math.floor(turret.getDiffBetweenFiring())); //set difference
+        hasToWait = false;
 
         entities = new ArrayList<>(); //init entities
 
@@ -40,7 +42,10 @@ public class turretActual extends Entity { //turret class
 
             while(!pm.isDone() && stillWorking) { //whilst the playermanager isn't done
                 try {
-                    TimeUnit.MILLISECONDS.sleep(differenceMs); //wait for ability to shoot
+                    if(hasToWait)
+                        TimeUnit.MILLISECONDS.sleep(differenceMs); //wait for ability to shoot
+                    else
+                        hasToWait = true;
 
                 } catch (InterruptedException e) {
                     System.out.println("Cooldown violated.");
@@ -53,7 +58,8 @@ public class turretActual extends Entity { //turret class
                     enemyActual e = enemies.get(0); //pick one
                     bulletActual b = new bulletActual(getXYInArr().clone(), turret.getBullet_fn(), e, turret.getDmgInt(), turret.getBulletSpd(), turret.getRangeInt()); //create a bullet
                     shotsFired.add(b); //add bullet to list
-                }
+                }else
+                    hasToWait = false;
 
 
                 for (Entity entity : ((ArrayList<Entity>) shotsFired.clone())) //for all of the bullets
