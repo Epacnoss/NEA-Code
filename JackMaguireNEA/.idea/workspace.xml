@@ -7,7 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adafda04-aca3-4402-bcfb-4f1651a3f54a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Gameplay/turrets/TurretFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gameplay/turrets/TurretFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -221,7 +220,7 @@
       <workItem from="1582105270229" duration="10905000" />
       <workItem from="1582120918737" duration="12758000" />
       <workItem from="1582144247884" duration="476000" />
-      <workItem from="1582190685971" duration="10988000" />
+      <workItem from="1582190685971" duration="11223000" />
     </task>
     <task id="LOCAL-00001" summary="change vcs.xml and workspace.xml, to allow for commits inside IntelliJ">
       <created>1582106040143</created>

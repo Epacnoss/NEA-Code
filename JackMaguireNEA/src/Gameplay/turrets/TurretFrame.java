@@ -405,7 +405,7 @@ public class TurretFrame extends JPanel { //turret info and player info JPanel
 
     private static void rickRoll () {
         Random rnd = new Random();
-        int number = rnd.nextInt(200);
+        int number = rnd.nextInt(10);
 
         try {
             for (int i = 0; i < number; i++)
