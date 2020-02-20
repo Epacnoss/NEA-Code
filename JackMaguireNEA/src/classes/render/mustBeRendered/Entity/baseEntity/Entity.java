@@ -6,6 +6,7 @@ import classes.util.resources.ResourceManager;
 import main.main;
 
 import javax.imageio.ImageIO;
+import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.net.URL;
@@ -22,7 +23,7 @@ public abstract class Entity implements Comparable<Entity> { //Entity class - ea
     private entityType type; //Type of entity - used for getting url and centre of hitbox
     private String fqdn; //url
 
-    private Image base; //base image
+    private BufferedImage base; //base image
 
     public Entity(Coordinate XYInArr, String fn, entityType type, Coordinate XYInTile) {
         this.XYInArr = XYInArr;
@@ -44,26 +45,32 @@ public abstract class Entity implements Comparable<Entity> { //Entity class - ea
             case turret:
                 fqdn = main.TURRET_IMAGES_LOC + fn;
                 CENTRE_OF_HITBOX = new Coordinate(main.TURRET_WIDTH / 2, main.TURRET_HEIGHT / 2);
+                break;
             default:
                 fqdn = fn;
                 CENTRE_OF_HITBOX = Coordinate.ZERO.clone();
+                break;
         }
 
+        Image baseImg;
         try {
             URL url = new URL(fqdn); //creating new url
 
-            base = ResourceManager.getImg(url);
+            baseImg = ResourceManager.getImg(url);
 
-            if(base == null)
+            if(baseImg == null)
                 throw new Exception("Img not found");
         } catch (Exception e) {
-            base = new BufferedImage(1, 1, BufferedImage.TYPE_INT_ARGB);
+            baseImg = new BufferedImage(1, 1, BufferedImage.TYPE_INT_ARGB);
         }
 
         Dimension wh = getWHOnType(type); //wh == width and height
-        base = base.getScaledInstance(wh.width, wh.height, Image.SCALE_SMOOTH); // scaling image to correct size
+        baseImg = baseImg.getScaledInstance(wh.width, wh.height, Image.SCALE_SMOOTH); // scaling image to correct size
         img = new BufferedImage(wh.width, wh.height, BufferedImage.TYPE_INT_ARGB); // creating the bufferedimage
-        img.getGraphics().drawImage(base, 0, 0, null); //drawing the image
+        img.getGraphics().drawImage(baseImg, 0, 0, null); //drawing the image
+
+        base = new BufferedImage(wh.width, wh.height, BufferedImage.TYPE_INT_ARGB);
+        base.getGraphics().drawImage(img, 0, 0, null);
     }
 
     //region getters and setters
@@ -72,7 +79,7 @@ public abstract class Entity implements Comparable<Entity> { //Entity class - ea
     }
 
     public BufferedImage getImg() {
-        return img;
+        return base;
     }
 
     public Coordinate getXYInArr() {

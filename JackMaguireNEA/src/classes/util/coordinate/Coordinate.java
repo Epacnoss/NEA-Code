@@ -25,7 +25,7 @@ public class Coordinate implements Comparable<Coordinate> { //coordinate class w
 
         boolean equal = equals(o); //if they are equal
         if(equal) //if it is equal - just return North
-            return dir.N;
+            return dir.Nothing;
 
         int xDist = getX() - o.getX(); //get the x and y distances
         int yDist = getY() - o.getY();

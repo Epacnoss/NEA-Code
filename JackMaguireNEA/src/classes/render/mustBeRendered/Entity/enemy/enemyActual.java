@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 public class enemyActual extends Entity { //enemy class
 
     private static final Color AURA_COLOUR = new Color(50, 163, 200);
-    private static final Coordinate IN_TILE_TARGET; //static final variable for target
+    private static final Coordinate IN_TILE_TARGET = addHitBoxTolerances(new Coordinate(main.TILE_WIDTH / 2, main.TILE_HEIGHT / 2), new Coordinate(main.ENEMY_WIDTH / 2, main.ENEMY_HEIGHT / 2)); //static final variable for target
 
     public static final long MOVE_GAP = 20; //MS - same as bullet
 
@@ -38,12 +38,6 @@ public class enemyActual extends Entity { //enemy class
     private boolean hasBeenSpawned; //have i been spawned yet
 
     private boolean auraOn;
-
-    static {
-        Coordinate targetInTileTemporaryVariable = Entity.turnFromArrToScrnPlusHalfTile(Coordinate.ZERO, new Coordinate(main.ENEMY_WIDTH / 2, main.ENEMY_HEIGHT / 2));
-        targetInTileTemporaryVariable = addHitBoxTolerances(targetInTileTemporaryVariable, new Coordinate(main.ENEMY_WIDTH, main.ENEMY_HEIGHT));
-        IN_TILE_TARGET = targetInTileTemporaryVariable;
-    }
 
     public enemyActual(enemyTemplate eTemplate, squareCollection squares, PlayerManager pm) {
         super(squares.getStart(), eTemplate.getFn(), entityType.enemy, IN_TILE_TARGET); // super all important variables
@@ -73,14 +67,7 @@ public class enemyActual extends Entity { //enemy class
 
 
         Runnable r = () -> {
-            if(pm.isDone()) //if the playermanager has died or is done - stop
-                return;
-
             long current = System.currentTimeMillis(); //the current time in ms
-
-            if(pm.isDone()) //again - if the playermanager is done - stop
-                return;
-
 
             while(!isDone() && !pm.isDone()) { //while we aren't done and neither is the player
                 if (currentStep >= squares.getEnemyPath().size()) //if we have reached the final step
@@ -89,7 +76,7 @@ public class enemyActual extends Entity { //enemy class
                     System.out.println("Ah-Ha! It appeareth that Tybalteth hath won this round, and Romeo hath beeneth 'pwned'");
                     return;
                 }
-                if (currentHP <= 0) //if we are dead
+                if (currentHP <= 0) //and if we are dead
                 {
                     isDead = true; //we are dead
                     System.out.println("Ah-Ha! Tybalt hath been 'pwned', but noteth by fairest Romeo, but by Ninja, the newesth recruitth of Mixerth.");
@@ -122,8 +109,8 @@ public class enemyActual extends Entity { //enemy class
                 double dist = getXYOnScrn().distTo(onScrnTarget); //get distance
 
                 if (distInPx >= dist) { //If the dist we can go is greater than the dist to go, then we know we can get there
-                    setXYInArr(currentCoord); //set the XYInArr coordinate to be right - so we can move to the next step
-                    setXYInTile(IN_TILE_TARGET); //move to correct place in tileI
+                    setXYInTile(IN_TILE_TARGET);
+                    setXYInArr(currentCoord);
                     currentStep++; //increment step
                     continue;
                 }

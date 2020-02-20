@@ -6,6 +6,7 @@ public enum dir { //direction enumerator
     S,
     E,
     W,
+    Nothing
     ;
 
     @Override
@@ -22,6 +23,9 @@ public enum dir { //direction enumerator
             }
             case N -> {
                 return "North"; //JDK 13 switch syntax
+            }
+            case Nothing -> {
+                return "null, but not actually";
             }
         }
         return "WHAT! HOW DID YOU DO THIS??????????????"; //confused error message

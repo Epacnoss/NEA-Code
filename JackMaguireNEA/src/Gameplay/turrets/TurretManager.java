@@ -107,11 +107,8 @@ public class TurretManager {
 
         if(!pm.buy(temp.getTurret().getCost())) //if we can't buy it - return, if we can - buy it and continue
         {
+            showNoMoney(tf);
             temp.noLongerWorking();
-            JOptionPane.showMessageDialog(tf,
-                    "You do not have enough remaining money to do that",
-                    "No money.",
-                    JOptionPane.ERROR_MESSAGE);
             return;
         }
 
@@ -136,6 +133,28 @@ public class TurretManager {
 
         int moneyBack = ta.getTurret().getSellValue(); //get sale value
         pm.donateM(moneyBack); //give money to playerManager
+    }
+
+    protected void upgradeTurret (turretActual ta) {
+        Coordinate where = ta.getXYInArr();
+        if(!turretSquaresUsed.contains(where))
+            return;
+
+        int cost = (ta.getUpgradeFactor() + 1) * ta.getTurret().getCost();
+        if(!pm.buy(cost))
+        {
+            showNoMoney(tf);
+            return;
+        }
+
+        ta.doUpgrade();
+    }
+
+    private static void showNoMoney (JPanel tf) {
+        JOptionPane.showMessageDialog(tf,
+                "You do not have enough remaining money to do that",
+                "No money.",
+                JOptionPane.ERROR_MESSAGE);
     }
 
 }
