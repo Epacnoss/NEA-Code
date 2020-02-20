@@ -62,12 +62,12 @@ public class waveManager { //class for spawning in enemies
         String waveDistStr = reader.get("enemyGaps", "waveGap").toString(); //get gaps between enemies and waves in string
 
         if(main.INT_REGEX.matcher(enemyDistStr).matches())
-            enemyDist = Integer.parseInt(enemyDistStr) * 1000; //if we can - parse int
+            enemyDist = Integer.parseInt(enemyDistStr); //if we can - parse int
         else
             enemyDist = 1000; //else just set to 1 second
 
         if(main.INT_REGEX.matcher(waveDistStr).matches()) //same - but with the wave difference
-            waveDist = Integer.parseInt(waveDistStr) * 1000;
+            waveDist = Integer.parseInt(waveDistStr);
         else
             waveDist = 3000;
 

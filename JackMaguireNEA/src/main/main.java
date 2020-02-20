@@ -9,18 +9,16 @@ import classes.render.mustRender.canvas;
 import classes.render.mustBeRendered.square.squareParser;
 import classes.render.mustBeRendered.square.squareCollection;
 import classes.util.coordinate.Coordinate;
-import classes.util.resources.ResourceManager;
 
 import javax.sound.sampled.*;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.regex.Pattern;
 
 public class main {
@@ -52,9 +50,7 @@ public class main {
     //endregion
 
     //region UI sizes
-    public static int CURRENT_LEVEL = 1; //level
     private static final CfgReader stage; //stage config reader
-    private static final CfgReader level; //level config reader
     public static final int NUM_OF_TILES_WIDTH; //num of tiles width
     public static final int NUM_OF_TILES_HEIGHT; //num of tiles height
 
@@ -108,8 +104,11 @@ public class main {
     public static final HashMap<String, Clip> SOUNDS; //all of the audio
 
 
-    protected static void lvl1 () { // level one method
+    protected static boolean lvl (int no) { // level one method
+        AtomicBoolean resultGiven = new AtomicBoolean(false);
+        AtomicBoolean result = new AtomicBoolean(false);
 
+        CfgReader level = new CfgReader(WAVES_LOC + "lvl" + no + ".cfg");
         String moneyStr = level.get("playerGets", "money").toString(); //money and hearts from level config file
         String heartsStr = level.get("playerGets", "hp").toString();
 
@@ -140,7 +139,7 @@ public class main {
         waveManager waves = new waveManager("lvl1.cfg", sqc, pm, window); //create waves
         System.out.println("WAVES DONE: " + new Timestamp(System.currentTimeMillis()));
 
-        canvas c = new canvas(CURRENT_LEVEL, pm, waves); //create canvas
+        canvas c = new canvas(1, pm, waves); //create canvas
         window.add(c); //add to window
         System.out.println("CANVAS DONE: " + new Timestamp(System.currentTimeMillis()));
 
@@ -189,12 +188,16 @@ public class main {
             int playAgain = JOptionPane.showConfirmDialog(null, "Would you like to play again?");
             if(playAgain == JOptionPane.YES_OPTION)
             {
-                lvl1();
+                result.set(true);
+                resultGiven.set(true);
                 System.out.println("Its replay time");
+                return;
             }
             else
             {
                 System.out.println("Au revoir");
+                result.set(false);
+                resultGiven.set(true);
                 System.exit(0);
             }
         });
@@ -202,17 +205,19 @@ public class main {
         runThread.start(); //start RunThread
 
         System.out.println("MAIN RUN THREAD STARTED: " + new Timestamp(System.currentTimeMillis()));
-    }
 
-    public static void main(String[] args) {
-        System.out.println();
+        while(!resultGiven.get())
+            continue;
+
+        return result.get();
     }
 
     static { //static initializer - for all the public static final variables that depend on each other, and for temp variables to space out code
         System.out.println("MAIN STATIC STARTING");
 
-        stage = new CfgReader(MAPS_LOC + "stg" + CURRENT_LEVEL + ".cfg"); //start the config reader
-        level = new CfgReader(WAVES_LOC + "lvl" + CURRENT_LEVEL + ".cfg");
+        //map is always stage 1 so...
+        //always 3 levels so.....
+        stage = new CfgReader(MAPS_LOC + "stg" + 1 + ".cfg"); //start the config reader
 
         NUM_OF_TILES_WIDTH = Integer.parseInt(stage.get("mapDeets", "rows").toString()); // get the tile widths and heights
         NUM_OF_TILES_HEIGHT = Integer.parseInt(stage.get("mapDeets", "cols").toString());

@@ -18,15 +18,24 @@ package main;
 
 import javax.swing.*;
 
-import static main.main.lvl1;
+import static main.main.lvl;
 
 public class ApexTurrets {
 
     public static void main(String[] args) { //main method
-        if(JOptionPane.showConfirmDialog(null, "Would you like to play a game of Apex Turrets?", "Apex Turrets?", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE) == JOptionPane.YES_OPTION)
-            lvl1();
-        else
+        if(JOptionPane.showConfirmDialog(null, "Would you like to play a game of Apex Turrets?", "Apex Turrets?", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE) != JOptionPane.YES_OPTION)
             System.exit(0);
+
+        Object[] lvls = {1, 2, 3};
+        Object result = JOptionPane.showInputDialog(null, "Which level would you like to play?", "Level?", JOptionPane.INFORMATION_MESSAGE, null, lvls, 0);
+        if(result == null)
+            System.exit(0);
+
+        boolean again = lvl(Integer.parseInt(result.toString()));
+        if(!again)
+            System.exit(0);
+        else
+            main(null);
     }
 
 }
