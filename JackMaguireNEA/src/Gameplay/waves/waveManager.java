@@ -135,7 +135,7 @@ public class waveManager { //class for spawning in enemies
                     }
 
                     enemyTemplate eT = enemyDictionary.getEnemy(c); //get the template from the dictionary
-                    enemyActual eA = new enemyActual(eT, sqc.clone(), pm); //create the enemy
+                    enemyActual eA = new enemyActual(eT, sqc.clone(), pm, win); //create the enemy
 
 
                     System.out.println("Enemy Started");
@@ -161,8 +161,8 @@ public class waveManager { //class for spawning in enemies
         return enemyActuals;
     }
 
-    private static void check (ArrayList<Entity> enemyActuals, PlayerManager pm, JFrame win) {
-        if(!win.isVisible()) {
+    private void check (ArrayList<Entity> enemyActuals, PlayerManager pm, JFrame win) {
+        if(!win.isVisible() && enemiesSpawned >= 1) {
             for(Entity e : enemyActuals) {
                 enemyActual casted = ((enemyActual) e);
                 casted.stop();
@@ -177,11 +177,12 @@ public class waveManager { //class for spawning in enemies
                 enemyActuals.remove(e); //take it off the rendering list
 
                 boolean isDead = eA.isDead(); //did it die
-                if(!isDead) { //if it didn't - if it reached the end
+                boolean didHit = eA.haveIHit();
+                if(didHit) { //if it didn't - if it reached the end
                     pm.takeHearts(eA.getTemplate().getHeartsCost()); //remove hearts from the player
                     System.out.println("Tybalteth's victory was reported, and we no got him :-(");
                 }
-                else //if it did die - from the bullets
+                else if (isDead) //if it did die - from the bullets
                 {
                     int moneyGained = eA.getTemplate().getMoneyBack(); // get the money back from enemy death
                     pm.donateM(moneyGained); //give money to the player
@@ -198,7 +199,7 @@ public class waveManager { //class for spawning in enemies
     private boolean hasThePCWon () { //checker method for if the player has won (PC referring to Player Character)
         if(enemiesSpawned == totEnemies) { //if we have spawned all of the enemies
             for (Entity enemyActual : enemyActuals) { // for each of the enemies remaining
-                if(enemyActual.isDone())
+                if(!enemyActual.isDone())
                     return false;
             }
 

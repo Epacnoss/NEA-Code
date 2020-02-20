@@ -323,6 +323,7 @@ public class TurretFrame extends JPanel { //turret info and player info JPanel
                 for(JButton btn : btns)
                     btn.setEnabled(false);
                 sellBtn.setEnabled(false);
+                upgradeBtn.setEnabled(false);
             }
 
             toPack.pack(); //pack the window

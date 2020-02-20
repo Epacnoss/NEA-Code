@@ -129,16 +129,15 @@ public class turretActual extends Entity { //turret class
 
     public void doUpgrade () {
         upgradeFactor++;
-        int factor = 0;
-        while(factor == 0)
-            factor = rnd.nextInt(upgradeFactor);
+        double factor = 0.0;
+        while(factor <= 1)
+            factor = rnd.nextDouble() * upgradeFactor;
+
         boolean upgradeDamage = rnd.nextBoolean();
         boolean multiply = rnd.nextBoolean();
 
-        if(factor == 1 && upgradeDamage)
-            multiply = false;
         if(!upgradeDamage)
-            factor *= 100;
+            factor *= 10 * (multiply ? 1 : 10);
 
         if(multiply) {
             if (upgradeDamage)

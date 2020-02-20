@@ -8,6 +8,7 @@ import classes.util.coordinate.Coordinate;
 import classes.util.coordinate.dir;
 import main.main;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.concurrent.TimeUnit;
@@ -39,7 +40,7 @@ public class enemyActual extends Entity { //enemy class
 
     private boolean auraOn;
 
-    public enemyActual(enemyTemplate eTemplate, squareCollection squares, PlayerManager pm) {
+    public enemyActual(enemyTemplate eTemplate, squareCollection squares, PlayerManager pm, JFrame win) {
         super(squares.getStart(), eTemplate.getFn(), entityType.enemy, IN_TILE_TARGET); // super all important variables
 
         template = eTemplate; //set variables
@@ -69,7 +70,7 @@ public class enemyActual extends Entity { //enemy class
         Runnable r = () -> {
             long current = System.currentTimeMillis(); //the current time in ms
 
-            while(!isDone() && !pm.isDone()) { //while we aren't done and neither is the player
+            while(!isDone() && !pm.isDone() && win.isVisible()) { //while we aren't done and neither is the player
                 if (currentStep >= squares.getEnemyPath().size()) //if we have reached the final step
                 {
                     hasHit = true; //we have hit
@@ -123,10 +124,15 @@ public class enemyActual extends Entity { //enemy class
                 } //move
 
 
+                if(!win.isVisible())
+                    stop();
             }
 
             System.out.println("Enemy hath beeneth `dn`");
         };
+        if(!win.isVisible())
+            return;
+
         runThread = new Thread(r); //create runthread
         runThread.start(); //start runThread
 
@@ -141,6 +147,10 @@ public class enemyActual extends Entity { //enemy class
     public boolean isDead () {
         return isDead;
     } // are we dead
+
+    public boolean haveIHit() {
+        return hasHit;
+    }
 
     @Override
     public boolean isDone () {
