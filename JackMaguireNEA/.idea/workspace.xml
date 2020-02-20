@@ -8,16 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="adafda04-aca3-4402-bcfb-4f1651a3f54a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NEA/classes/util/coordinate/Coordinate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NEA/classes/util/coordinate/Coordinate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NEA/classes/util/coordinate/dir.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NEA/classes/util/coordinate/dir.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NEA/main/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NEA/main/main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Gameplay/turrets/TurretFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gameplay/turrets/TurretFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gameplay/turrets/TurretManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gameplay/turrets/TurretManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/baseEntity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/baseEntity/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/enemy/enemyActual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/enemy/enemyActual.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/turret/turretActual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/render/mustBeRendered/Entity/turret/turretActual.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/util/coordinate/Coordinate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/util/coordinate/Coordinate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/util/coordinate/dir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/util/coordinate/dir.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +221,7 @@
       <workItem from="1582105270229" duration="10905000" />
       <workItem from="1582120918737" duration="12758000" />
       <workItem from="1582144247884" duration="476000" />
-      <workItem from="1582190685971" duration="10532000" />
+      <workItem from="1582190685971" duration="10988000" />
     </task>
     <task id="LOCAL-00001" summary="change vcs.xml and workspace.xml, to allow for commits inside IntelliJ">
       <created>1582106040143</created>
@@ -463,40 +454,40 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="176" y="77" key="DiffContextDialog/0.0.1366.768@0.0.1366.768" timestamp="1582114907909" />
-    <state width="1324" height="202" key="GridCell.Tab.0.bottom" timestamp="1582202706436">
+    <state width="1324" height="202" key="GridCell.Tab.0.bottom" timestamp="1582203919457">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1324" height="202" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1582202706436" />
+    <state width="1324" height="202" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1582203919457" />
     <state width="1878" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1581404441278" />
     <state width="1324" height="202" key="GridCell.Tab.0.bottom/0.23.1366.745@0.23.1366.745" timestamp="1581940438080" />
     <state width="1878" height="375" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1580760615874" />
     <state width="1878" height="235" key="GridCell.Tab.0.bottom/0.23.1920.994@0.23.1920.994" timestamp="1580661750294" />
     <state width="1878" height="235" key="GridCell.Tab.0.bottom/0.23.1920.996@0.23.1920.996" timestamp="1580659142609" />
     <state width="1878" height="184" key="GridCell.Tab.0.bottom/0.23.1920.997@0.23.1920.997" timestamp="1580643390999" />
-    <state width="1324" height="202" key="GridCell.Tab.0.center" timestamp="1582202706435">
+    <state width="1324" height="202" key="GridCell.Tab.0.center" timestamp="1582203919454">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1324" height="202" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1582202706435" />
+    <state width="1324" height="202" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1582203919454" />
     <state width="1878" height="375" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1581404441277" />
     <state width="1324" height="202" key="GridCell.Tab.0.center/0.23.1366.745@0.23.1366.745" timestamp="1581940438067" />
     <state width="1878" height="375" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1580760615872" />
     <state width="1878" height="235" key="GridCell.Tab.0.center/0.23.1920.994@0.23.1920.994" timestamp="1580661750292" />
     <state width="1878" height="235" key="GridCell.Tab.0.center/0.23.1920.996@0.23.1920.996" timestamp="1580659142606" />
     <state width="1878" height="184" key="GridCell.Tab.0.center/0.23.1920.997@0.23.1920.997" timestamp="1580643390998" />
-    <state width="1324" height="202" key="GridCell.Tab.0.left" timestamp="1582202706433">
+    <state width="1324" height="202" key="GridCell.Tab.0.left" timestamp="1582203919452">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1324" height="202" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1582202706433" />
+    <state width="1324" height="202" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1582203919452" />
     <state width="1878" height="375" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1581404441276" />
     <state width="1324" height="202" key="GridCell.Tab.0.left/0.23.1366.745@0.23.1366.745" timestamp="1581940438058" />
     <state width="1878" height="375" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1580760615871" />
     <state width="1878" height="235" key="GridCell.Tab.0.left/0.23.1920.994@0.23.1920.994" timestamp="1580661750292" />
     <state width="1878" height="235" key="GridCell.Tab.0.left/0.23.1920.996@0.23.1920.996" timestamp="1580659142601" />
     <state width="1878" height="184" key="GridCell.Tab.0.left/0.23.1920.997@0.23.1920.997" timestamp="1580643390996" />
-    <state width="1324" height="202" key="GridCell.Tab.0.right" timestamp="1582202706436">
+    <state width="1324" height="202" key="GridCell.Tab.0.right" timestamp="1582203919455">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1324" height="202" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1582202706436" />
+    <state width="1324" height="202" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1582203919455" />
     <state width="1878" height="375" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1581404441278" />
     <state width="1324" height="202" key="GridCell.Tab.0.right/0.23.1366.745@0.23.1366.745" timestamp="1581940438069" />
     <state width="1878" height="375" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1580760615873" />

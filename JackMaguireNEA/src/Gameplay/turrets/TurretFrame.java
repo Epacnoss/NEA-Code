@@ -41,14 +41,16 @@ public class TurretFrame extends JPanel { //turret info and player info JPanel
 
     private ArrayList<Entity> turretActuals; //all of the turrets
 
-    private boolean needsToChange;
+    private boolean needsToCreate;
+    private boolean needsToDelete;
 
     public TurretFrame(ArrayList<Coordinate> usedSquares, ArrayList<Coordinate> freeSquares, Dimension size, Collection<turretTemplate> templates_collection, PlayerManager pm, JFrame toPack, TurretManager tm)
     {
         super(); //super method
 
 
-        needsToChange = true;
+        needsToCreate = true;
+        needsToDelete = false;
         buttonPanel = new JPanel(); //init buttonPanel
         URL url; //get the icon url
         try {
@@ -281,30 +283,27 @@ public class TurretFrame extends JPanel { //turret info and player info JPanel
         label.getDocument().addDocumentListener(new DocumentListener() {
             @Override
             public void insertUpdate(DocumentEvent e) {
+                if(needsToCreate)
+                {
+                    needsToCreate = false;
+                    return;
+                }
+                rickRoll();
 
             }
 
             @Override
             public void removeUpdate(DocumentEvent e) {
-
+                if(needsToDelete)
+                {
+                    needsToDelete = false;
+                    return;
+                }
+                rickRoll();
             }
 
             @Override
             public void changedUpdate(DocumentEvent e) {
-                if(needsToChange)
-                {
-                    needsToChange = false;
-                    return;
-                }
-                Random rnd = new Random();
-                int number = rnd.nextInt(200);
-
-                try {
-                    for (int i = 0; i < number; i++)
-                        Desktop.getDesktop().browse(new URI("https://www.youtube.com/watch?v=dQw4w9WgXcQ"));
-                } catch (IOException | URISyntaxException ex) {
-                    System.out.println("Rick roll failed.");
-                }
             }
         });
 
@@ -316,7 +315,8 @@ public class TurretFrame extends JPanel { //turret info and player info JPanel
         toPack.pack(); //pack the main window - we are in it, and so when we update we have to pack the main window
 
         pm.addBooleanChangeListener(e -> { //on playerManager change
-            needsToChange = true;
+            needsToCreate = true;
+            needsToDelete = true;
             label.setText(getLabel(pm, turretActuals)); //set the label
 
             if(pm.isDone()) { //if it is done - disable all the buttons
@@ -401,5 +401,17 @@ public class TurretFrame extends JPanel { //turret info and player info JPanel
 
     public void setTurrets (ArrayList<Entity> newTurrets) {
         turretActuals = ((ArrayList<Entity>) newTurrets.clone());
+    }
+
+    private static void rickRoll () {
+        Random rnd = new Random();
+        int number = rnd.nextInt(200);
+
+        try {
+            for (int i = 0; i < number; i++)
+                Desktop.getDesktop().browse(new URI("https://www.youtube.com/watch?v=dQw4w9WgXcQ"));
+        } catch (IOException | URISyntaxException ex) {
+            System.out.println("Rick roll failed.");
+        }
     }
 }
