@@ -7,6 +7,7 @@ import classes.render.mustBeRendered.Entity.turret.turretActual;
 import classes.render.mustBeRendered.Entity.turret.turretTemplate;
 import classes.util.CustomActionListeners.BooleanChangeEvent;
 import classes.util.CustomActionListeners.BooleanChangeListener;
+import classes.util.Leaderboard.SaveSystem;
 import classes.util.coordinate.Coordinate;
 import classes.util.resources.ResourceManager;
 import main.main;
@@ -44,7 +45,7 @@ public class TurretFrame extends JPanel { //turret info and player info JPanel
     private boolean needsToCreate;
     private boolean needsToDelete;
 
-    public TurretFrame(ArrayList<Coordinate> usedSquares, ArrayList<Coordinate> freeSquares, Dimension size, Collection<turretTemplate> templates_collection, PlayerManager pm, JFrame toPack, TurretManager tm)
+    public TurretFrame(int lvl, ArrayList<Coordinate> usedSquares, ArrayList<Coordinate> freeSquares, Dimension size, Collection<turretTemplate> templates_collection, PlayerManager pm, JFrame toPack, TurretManager tm)
     {
         super(); //super method
 
@@ -278,7 +279,7 @@ public class TurretFrame extends JPanel { //turret info and player info JPanel
         buttonPanel.add(sellBtn); //add the sell button to the buttonPanel
         buttonPanel.add(upgradeBtn);
 
-        JTextArea label = new JTextArea(getLabel(pm, turretActuals)); //create the label
+        JTextArea label = new JTextArea(getLabel(pm, turretActuals, lvl)); //create the label
         label.setPreferredSize(new Dimension(size.width, size.height / 2)); //set the size
         label.getDocument().addDocumentListener(new DocumentListener() {
             @Override
@@ -317,7 +318,7 @@ public class TurretFrame extends JPanel { //turret info and player info JPanel
         pm.addBooleanChangeListener(e -> { //on playerManager change
             needsToCreate = true;
             needsToDelete = true;
-            label.setText(getLabel(pm, turretActuals)); //set the label
+            label.setText(getLabel(pm, turretActuals, lvl)); //set the label
 
             if(pm.isDone()) { //if it is done - disable all the buttons
                 for(JButton btn : btns)
@@ -379,8 +380,10 @@ public class TurretFrame extends JPanel { //turret info and player info JPanel
         return index;
     }
 
-    private static String getLabel(PlayerManager pm, ArrayList<Entity> turrets) { //getLabel method for the label
+    private static String getLabel(PlayerManager pm, ArrayList<Entity> turrets, int lvl) { //getLabel method for the label
         String pmPart = "Money: " + pm.getMoney() + "\nHearts remaining: " + pm.getHearts(); //the part with the playerManager
+
+        pmPart += "\n" + "Top high score for this level: " + SaveSystem.getHighScore(lvl);
 
         if(turrets.size() == 0)
             return pmPart; //if there are no turrets - return the playerManager part

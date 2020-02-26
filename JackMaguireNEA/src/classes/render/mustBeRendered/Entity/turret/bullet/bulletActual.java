@@ -23,8 +23,8 @@ public class bulletActual extends Entity { //bullet class
 
     private Thread runThread; //runThread
 
-    public bulletActual(Coordinate XYInArr, String fn, enemyActual enemy, int dmg_, int spd_, int range) {
-        super(XYInArr, fn, entityType.bullet, new Coordinate(main.TILE_WIDTH / 2, main.TILE_HEIGHT / 2));
+    public bulletActual(Coordinate startXYInArr, String fn, enemyActual enemy, int dmg_, int spd_, int range) {
+        super(startXYInArr, fn, entityType.bullet, new Coordinate(main.TILE_WIDTH / 2, main.TILE_HEIGHT / 2));
 
         hit = false; //we haven't hit the enemy yet
         enemyToHit = enemy;
@@ -69,7 +69,7 @@ public class bulletActual extends Entity { //bullet class
                     return; //close loop
                 }
 
-                if(getXYInArr().distTo(enemyToHit.getXYInArr()) > range + 1) //if the enemy is out of range
+                if(startXYInArr.distTo(enemyToHit.getXYInArr()) >= range + 1) //if the enemy is out of range, we use the start as they can't go too far from the turret.
                 {
                     dead = true; //we are dead
                     System.out.println("Oof size: Large");

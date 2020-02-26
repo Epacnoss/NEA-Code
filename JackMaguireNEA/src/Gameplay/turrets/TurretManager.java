@@ -33,7 +33,7 @@ public class TurretManager {
     private Thread runThread; //the runThread
 
 
-    public TurretManager(squareCollection sqc_, PlayerManager pm, JFrame window) {
+    public TurretManager(squareCollection sqc_, PlayerManager pm, JFrame window, int lvl) {
         sqc = sqc_; //set the squareCollection
 
         dictionary = new turretDictionary(main.TURRET_FNS); //create the dictionary
@@ -42,7 +42,7 @@ public class TurretManager {
         turretSquaresFree = (ArrayList<Coordinate>) turretSquaresAll.clone(); //set the squares for the turrets
         turretSquaresUsed = new ArrayList<>();
 
-        tf = new TurretFrame(turretSquaresUsed, turretSquaresFree, new Dimension(main.WINDOW_WIDTH, main.WINDOW_HEIGHT), dictionary.getTurrets().values(), pm, window, this); //create the turretFrame
+        tf = new TurretFrame(lvl, turretSquaresUsed, turretSquaresFree, new Dimension(main.WINDOW_WIDTH, main.WINDOW_HEIGHT), dictionary.getTurrets().values(), pm, window, this); //create the turretFrame
         this.pm = pm; //set the playerManager
 
         turrets = new ArrayList<>();

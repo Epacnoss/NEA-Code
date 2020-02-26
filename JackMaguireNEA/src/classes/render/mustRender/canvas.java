@@ -6,6 +6,7 @@ import Gameplay.waves.waveManager;
 import classes.render.mustBeRendered.Entity.baseEntity.Entity;
 import classes.render.mustBeRendered.Entity.enemy.enemyActual;
 import classes.render.mustBeRendered.square.Square;
+import classes.util.Leaderboard.SaveSystem;
 import main.main;
 
 import javax.swing.*;
@@ -41,8 +42,8 @@ public class canvas extends JComponent { //canvas class to render everything
 
     private static final BufferedImage[] RED_IMGS; //shades of red for loss
     private static final BufferedImage[] GREEN_IMGS; //shades of green for victory
-    private static final long DIFFERENCE_BETWEEN_COLOUR_CHANGE = 1; //difference between colour changes - ms
-    private static final long DIFFERENCE_BETWEEN_SQUARES = 1; //difference between square changes - ms
+    private static final long DIFFERENCE_BETWEEN_COLOUR_CHANGE = 0; //difference between colour changes - ms
+    private static final long DIFFERENCE_BETWEEN_SQUARES = 0; //difference between square changes - ms
 
     static { //static initializer
         Color[] reds = new Color[256]; // create reds temp for colours
@@ -73,8 +74,8 @@ public class canvas extends JComponent { //canvas class to render everything
         System.out.println("IMGS CREATED");
     }
 
-    public canvas (int stage, PlayerManager pm, waveManager wm) { //constructor for the canvas class
 
+    public canvas (int stage, PlayerManager pm, waveManager wm) { //constructor for the canvas class
         CfgReader sqpCfg = new CfgReader(main.MAPS_LOC + "stg" + stage + ".cfg"); //create new cfgReader for the map details for the squareParser
         squareParser sqp = new squareParser(sqpCfg); //create a new squareParser using the cfgReader
         sqc = new squareCollection(sqp); //create a new squareCollection using the squareParser
@@ -107,8 +108,8 @@ public class canvas extends JComponent { //canvas class to render everything
         deadThread = new Thread(dead); // create deathThread
 
         Runnable won = () -> { //win runnable - same as deathThread, only difference is message and colour
-
             int score = pm.getMoney() + pm.getHearts() * 10;
+            SaveSystem.setHighScore(stage, score);
 
             StringJoiner winTxtBuilder = new StringJoiner("\n");
             winTxtBuilder.add("You won!");
@@ -225,7 +226,6 @@ public class canvas extends JComponent { //canvas class to render everything
 
     private void dieOrWin(BufferedImage[] imgs, String txt) {
         vCanvas.getGraphics().drawString(txt, main.TILE_WIDTH, main.TILE_HEIGHT);
-
 
         for (int y = 0; y < main.NUM_OF_TILES_HEIGHT; y++) {
             for (int x = 0; x < main.NUM_OF_TILES_WIDTH; x++) {

@@ -136,14 +136,14 @@ public class main {
         squareCollection sqc = new squareCollection(new squareParser(new CfgReader(main.MAPS_LOC + "stg1.cfg"))); //create squares
         System.out.println("SQC DONE: " + new Timestamp(System.currentTimeMillis()));
 
-        waveManager waves = new waveManager("lvl1.cfg", sqc, pm, window); //create waves
+        waveManager waves = new waveManager("lvl" + no + ".cfg", sqc, pm, window); //create waves
         System.out.println("WAVES DONE: " + new Timestamp(System.currentTimeMillis()));
 
         canvas c = new canvas(1, pm, waves); //create canvas
         window.add(c); //add to window
         System.out.println("CANVAS DONE: " + new Timestamp(System.currentTimeMillis()));
 
-        TurretManager tm = new TurretManager(sqc, pm, window); //create turretManager and so turretFrame
+        TurretManager tm = new TurretManager(sqc, pm, window, no); //create turretManager and so turretFrame
         System.out.println("TM DONE: " + new Timestamp(System.currentTimeMillis()));
 
         window.pack(); //pack window
