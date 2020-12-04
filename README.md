@@ -1,6 +1,7 @@
 # Tower Defense Game - NEA-Code
 For Jack Maguire's 2019-2020 A-Level Computer Science
 Managed to get me an A*.
+Don't ask about the Romeo/Juliet references. I don't know what was going on when I coded them in...
 
 Coded in Java, using IntelliJ IDEA Ultimate Edition.
 Make sure to use Java 14 - some features won't work otherwise.
