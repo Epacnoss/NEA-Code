@@ -250,3 +250,5 @@ public class canvas extends JComponent { //canvas class to render everything
         }
     }
 }
+
+
